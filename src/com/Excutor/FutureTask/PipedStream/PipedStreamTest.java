@@ -31,7 +31,7 @@ public class PipedStreamTest {
         Thread p3 = new Thread(producer, "生3");
         Thread p4 = new Thread(producer, "生4");
 
-        new
+        //new
 
     }
 
