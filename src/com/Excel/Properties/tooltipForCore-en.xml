@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tooltipRoot>
+    <version>1.0</version>
+    <description>ArcVideo core tooltip</description>
+    <tooltips>
+        <tooltip id="task.stream.scd.alert">
+            <description><![CDATA[Opening Scene Detection does not recommend HLS Slice Output]]></description>
+        </tooltip>
+        <tooltip id="task.stream.hdr.alert">
+            <description><![CDATA[Philips HDR requires an environment above CentOS 7.3 and installs Philips drivers]]></description>
+        </tooltip>
+        <tooltip id="task.stream.resolution.alert">
+            <description><![CDATA[1.8K resolution only supports H265 < br > 2. Input or output is 8K resolution, and preprocessing can only choose CPU.]]></description>
+        </tooltip>
+        <tooltip id="task.output.mpegdash.drmSystems">
+            <description><![CDATA[<span class="tip_bold">DRM system types are:</span>1:PLAYREADY, 2:WIDEVINE, 4:FAIRPLAY<br><br>When used, it is filled in numerically separated by commas, such as "1,2"]]></description>
+        </tooltip>
+    </tooltips>
+</tooltipRoot>

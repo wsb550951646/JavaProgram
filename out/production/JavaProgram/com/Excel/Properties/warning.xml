@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<warning_map version="1.0" description="all warning infomation of arcvideo transcoder"> 
+  <!-- warning maps -->  
+  <!-- web[0x82000xxx] -->  
+  <warning id="0x02000001" alias="task_auto_restart" level="warning" belong="live" type="TASK" category="ET_Internal" current="0" pair="none" description="任务自动重启1" relatedInfo="n/a"/>  
+  <warning id="0x82000002" alias="task_error" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="任务执行失败" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x82005001" alias="task_error" level="error" belong="live/core" type="TASK" category="ET_Internal" current="0" pair="none" description="YY任务无法启动" relatedInfo="n/a"/>  
+  <warning id="0x82005002" alias="task_error" level="error" belong="live/core" type="TASK" category="ET_Internal" current="0" pair="none" description="YY号已被占用" relatedInfo="n/a"/>  
+  <warning id="0x02000003" alias="task_warning" level="warning" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="任务执行警告" enabled="0" needHandle="false" relatedInfo="n/a"/>  
+  <!-- web lib -->  
+  <warning id="0x81000301" alias="task_error_ftp_upload_file" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="FTP上传失败" relatedInfo="n/a"/>  
+  <warning id="0x81000302" alias="task_error_ftp_connect" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="FTP连接失败" relatedInfo="n/a"/>  
+  <warning id="0x81000303" alias="task_error_ftp_login" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="FTP登录失败" relatedInfo="n/a"/>  
+  <warning id="0x81000507" alias="storage_lost" level="error" belong="live/core" type="HARDWARE" category="ET_Hardware" pair="none" description="磁盘断开连接: #{storage_name}" relatedInfo=""/>  
+  <warning id="0x81000508" alias="storage_abnormal" level="error" belong="live/core" type="HARDWARE" category="ET_Hardware" pair="none" description="磁盘无法读取: #{storage_name}" relatedInfo=""/>  
+  <warning id="0x00061AE6" alias="task_write_file_failed" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="写文件失败" relatedInfo="n/a"/>  
+  <warning id="0x01000201" alias="transcoder_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" description="超出转码个数" relatedInfo="n/a"/>  
+  <warning id="0x01000202" alias="transcoder_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" description="超出转码个数" relatedInfo="n/a"/>  
+  <warning id="0x01000203" alias="transcoder_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" description="超出转码个数" relatedInfo="n/a"/>  
+  <warning id="0x01000204" alias="transcoder_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" description="超出转码个数" relatedInfo="n/a"/>  
+  <warning id="0x01000205" alias="transcoder_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" description="超出转码个数" relatedInfo="n/a"/>  
+  <warning id="0x01000206" alias="transcoder_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" description="超出转码个数" relatedInfo="n/a"/>  
+  <warning id="0x01000301" alias="transcoder_waiting_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="超出等待个数" condition="&gt;=3" relatedInfo="n/a"/>  
+  <warning id="0x81000003" alias="task_transcoder_exception" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" current="0" description="转码器异常退出" relatedInfo="n/a"/>  
+  <warning id="0x81000102" alias="outputgroup_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" current="0" description="超出转码个数" relatedInfo="n/a"/>  
+  <!-- transcoder -->  
+  <warning id="0x80090002" level="error" belong="live/core" type="TASK" category="ET_Setting" pair="none" description="输入任务XML语法错误" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090003" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="输入媒体解析失败" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090004" level="error" belong="live/core" type="TASK" category="ET_Setting" pair="none" description="转码设置中不需要转码" relatedInfo="n/a"/>  
+  <warning id="0x80090005" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="初始化转码graph任务失败" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090006" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="获取graph接口失败" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090007" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="输入媒体找不到解析器" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090008" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="打开输入文件失败" relatedInfo="n/a"/>  
+  <warning id="0x80090009" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="指定解析器不支持输入媒体" relatedInfo="n/a"/>  
+  <warning id="0x8009000A" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="创建指定解析器失败" relatedInfo="n/a"/>  
+  <warning id="0x8009000B" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="创建视频解码器失败" relatedInfo="n/a"/>  
+  <warning id="0x8009000C" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="视频解码器格式不支持" relatedInfo="n/a"/>  
+  <warning id="0x8009000D" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="内部组件初始化失败" relatedInfo="n/a"/>  
+  <warning id="0x8009000E" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="创建视频编码器失败" relatedInfo="n/a"/>  
+  <warning id="0x8009000F" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="编码器连接失败" relatedInfo="n/a"/>  
+  <warning id="0x80090010" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="初始化编码器失败" relatedInfo="n/a"/>  
+  <warning id="0x80090011" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="初始化Audio解码器失败" relatedInfo="n/a"/>  
+  <warning id="0x80090012" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Audio解码器格式不支持" relatedInfo="n/a"/>  
+  <warning id="0x80090013" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="创建Audio解码器组件失败" relatedInfo="n/a"/>  
+  <warning id="0x80090014" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="初始化Audio解码器组件失败" relatedInfo="n/a"/>  
+  <warning id="0x80090015" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="创建复用器组件失败" relatedInfo="n/a"/>  
+  <warning id="0x80090016" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="初始化复用器组件失败" relatedInfo="n/a"/>  
+  <warning id="0x80090017" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="查询graph控制接口失败" relatedInfo="n/a"/>  
+  <warning id="0x80090018" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="查询graph搜寻接口失败" relatedInfo="n/a"/>  
+  <warning id="0x80090019" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入文件跳转失败" relatedInfo="n/a"/>  
+  <warning id="0x8009001A" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="转码启动失败" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x8009001B" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="创建graph失败" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x8009001C" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="创建内部组件失败" relatedInfo="n/a"/>  
+  <warning id="0x8009001D" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="视频解码器与后端对接失败" relatedInfo="n/a"/>  
+  <warning id="0x8009001E" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="音频解码器与后端对接失败" relatedInfo="n/a"/>  
+  <warning id="0x8009001F" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="PG解码器与后端对接失败" relatedInfo="n/a"/>  
+  <warning id="0x80090020" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="字幕解码器与后端对接失败" relatedInfo="n/a"/>  
+  <warning id="0x80090021" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="MV clip错误" relatedInfo="n/a"/>  
+  <warning id="0x80090022" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="转码任务hang" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090023" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="动图不存在" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090024" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="视频编码器不支持功能" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090025" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="转码程序内存严重泄漏" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090026" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="裁剪时间超出文件时长范围" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090027" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="设置输出路径或者参数错误" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090028" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="加载字幕文件失败" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090200" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="转码程序内存严重泄漏" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x0009010a" level="warning" belong="live" type="SOURCE" category="ET_Input" pair="close" pair_id="0x00090106;0x00090107" description="垫片文件恢复正常" relatedInfo="n/a"/>  
+  <warning id="0x00090109" level="warning" belong="core/live" type="TASK" category="ET_Internal" pair="none" enabled="0" description="自动切换成CPU编码" relatedInfo="n/a"/>  
+  <warning id="0x00090101" level="warning" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入文件中无视频" relatedInfo="n/a"/>  
+  <warning id="0x00090102" level="warning" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入文件中无音频" relatedInfo="n/a"/>  
+  <warning id="0x00090103" level="warning" belong="live" type="SOURCE" category="ET_Input" current="0" pair="none" description="信源切换到主信号" relatedInfo="n/a"/>  
+  <warning id="0x00090104" level="warning" belong="live" type="SOURCE" category="ET_Input" current="0" pair="none" description="信源切换到备信号" relatedInfo="n/a"/>  
+  <warning id="0x00090105" level="warning" belong="live" type="SOURCE" category="ET_Input" current="0" pair="none" description="信源切换到垫信号" relatedInfo="n/a"/>  
+  <warning id="0x00090106" level="warning" belong="live" type="SOURCE" category="ET_Input" pair="open" pair_id="0x0009010a" description="垫片文件不存在" relatedInfo="n/a"/>  
+  <warning id="0x00090107" level="warning" belong="live" type="SOURCE" category="ET_Input" pair="open" pair_id="0x0009010a" description="垫片文件格式不支持" relatedInfo="n/a"/>  
+  <warning id="0x00090108" level="warning" belong="live" type="SOURCE" category="ET_Input" pair="none" description="cuda初始化超时" relatedInfo="n/a"/>  
+  <warning id="0x00090200" level="warning" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="转码程序内存泄露" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x00099001" level="warning" belong="live" type="TASK" category="ET_Output" pair="open" pair_id="0x00099002" description="连接(http/rtmp/mms)失败" relatedInfo="n/a"/>  
+  <warning id="0x00099002" level="notify" belong="live" type="TASK" category="ET_Output" pair="close" pair_id="0x00099001" description="连接(http/rtmp/mms)恢复正常" relatedInfo="n/a"/>  
+  <warning id="0x00090026" level="warning" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="裁剪时间超出文件时长范围" relatedInfo="n/a"/>  
+  <!-- http source -->  
+  <warning id="0x00010001" level="warning" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="连接输入URL失败" relatedInfo="失败的URL"/>  
+  <warning id="0x00010002" level="warning" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="读取数据失败" relatedInfo="失败的URL"/>  
+  <warning id="0x80010001" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="重连输入URL失败" relatedInfo="失败的URL"/>  
+  <warning id="0x80010002" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="读取输入源数据失败" relatedInfo="失败的URL"/>  
+  <warning id="0x00010005" level="warning" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="HLS输入切片读取失败：#{filename}" relatedInfo="n/a"/>  
+  <!-- file source -->  
+  <warning id="0x00010010" level="warning" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="读取源文件数据失败" relatedInfo="n/a"/>  
+  <!-- libArcStreamSplitter-->  
+  <warning id="0x80011001" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="切片转码合成时读取数据失败" relatedInfo="失败的URL"/>  
+  <warning id="0x80011002" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="切片转码切片数据不完整" relatedInfo="n/a"/>  
+  <!-- ArcDemux -->  
+  <warning id="0x8002100A" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="源文件存在错误，选定的Audio或者Video数据大量丢失" relatedInfo=""/>  
+  <warning id="0x8002100B" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="不能找到指定频道" relatedInfo=""/>  
+  <warning id="0x0002100C" level="warning" belong="core/live" type="TASK" category="ET_Parse" pair="open" pair_id="0x00021018" description="选定的Video数据大量丢失" relatedInfo=""/>  
+  <warning id="0x0002100D" level="warning" belong="core/live" type="TASK" category="ET_Parse" pair="open" pair_id="0x00021019" description="选定的Audio数据大量丢失" relatedInfo=""/>  
+  <warning id="0x0002100E" level="warning" belong="live" type="TASK" category="ET_Performance" pair="open" pair_id="0x0002100F" description="视频队列满，编码器性能不足或者输入源无视频" needHandle="true" relatedInfo=""/>  
+  <warning id="0x0002100F" level="notify" belong="live" type="TASK" category="ET_Performance" pair="close" pair_id="0x0002100E" description="视频队列恢复正常" relatedInfo=""/>  
+  <warning id="0x00021010" level="warning" belong="live" type="TASK" category="ET_Performance" pair="open" pair_id="0x00021011" description="音频队列满，编码器性能不足或者输入源无音频" relatedInfo=""/>  
+  <warning id="0x00021011" level="notify" belong="live" type="TASK" category="ET_Performance" pair="close" pair_id="0x00021010" description="音频队列恢复正常" relatedInfo=""/>  
+  <warning id="0x00021012" level="warning" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="Program ID发生改变" relatedInfo=""/>  
+  <warning id="0x00021013" level="warning" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="PMT PID发生改变" relatedInfo=""/>  
+  <warning id="0x00021014" level="notify" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="Video PID发生改变" relatedInfo=""/>  
+  <warning id="0x00021015" level="notify" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="Audio PID发生改变" relatedInfo=""/>  
+  <warning id="0x00021016" level="notify" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="Video类型发生改变" relatedInfo=""/>  
+  <warning id="0x00021017" level="notify" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="Audio类型发生改变" relatedInfo=""/>  
+  <warning id="0x00021018" level="notify" belong="core/live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002100C" description="选定的Video数据大量丢失后恢复正常" relatedInfo=""/>  
+  <warning id="0x00021019" level="notify" belong="core/live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002100D" description="选定的Audio数据大量丢失后恢复正常" relatedInfo=""/>  
+  <warning id="0x0002101A" level="warning" belong="core" type="TASK" category="ET_Parse" pair="open" pair_id="0x0002101B" description="选定的Audio和Video时间戳相差太大" relatedInfo=""/>  
+  <warning id="0x0002101B" level="notify" belong="core" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002101A" description="选定的Audio和Video时间戳相差太大后恢复正常" relatedInfo=""/>  
+  <warning id="0x0002101C" level="notify" belong="core/live" type="TASK" category="ET_Parse" pair="open" pair_id="0x0002101D" description="PAT CRC32发生错误" relatedInfo=""/>  
+  <warning id="0x0002101D" level="notify" belong="core/live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002101C" description="PAT CRC32发生错误后恢复" relatedInfo=""/>  
+  <warning id="0x0002101E" level="notify" belong="core/live" type="TASK" category="ET_Parse" pair="open" pair_id="0x0002101F" description="PMT CRC32发生错误" relatedInfo=""/>  
+  <warning id="0x0002101F" level="notify" belong="core/live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002101E" description="PMT CRC32发生错误后恢复" relatedInfo=""/>  
+  <warning id="0x00021020" level="notify" belong="live" type="TASK" category="ET_Source" pair="open" pair_id="0x00021021" description="信源发送速率异常，不均匀" relatedInfo=""/>  
+  <warning id="0x00021021" level="notify" belong="live" type="TASK" category="ET_Source" pair="close" pair_id="0x00021020" description="信源发送速率异常后恢复正常发送" relatedInfo=""/>  
+  <warning id="0x00021022" level="warning" belong="live" type="TASK" category="ET_Performance" pair="open" pair_id="0x00021023" description="字幕队列满" needHandle="true" relatedInfo=""/>  
+  <warning id="0x00021023" level="notify" belong="live" type="TASK" category="ET_Performance" pair="close" pair_id="0x00021022" description="字幕队列恢复正常" relatedInfo=""/>  
+  <warning id="0x00021024" level="notify" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="Subtitle PID发生改变" relatedInfo=""/>  
+  <warning id="0x00021025" level="notify" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="Subtitle类型发生改变" relatedInfo=""/>  
+  <warning id="0x00021026" level="warning" belong="live" type="TASK" category="ET_Source" pair="open" pair_id="0x00021028" description="信源发送速率过快" relatedInfo=""/>  
+  <warning id="0x00021027" level="warning" belong="live" type="TASK" category="ET_Source" pair="open" pair_id="0x00021028" description="信源发送速率过慢" relatedInfo=""/>  
+  <warning id="0x00021028" level="notify" belong="live" type="TASK" category="ET_Source" pair="close" pair_id="0x00021026;0x00021027" description="信源发送速率异常后恢复正常" relatedInfo=""/>  
+  <warning id="0x000210A0" level="notify" belong="live" type="SOURCE" category="ET_Source" pair="close" pair_id="0x000210A1;0x000210A2;0x000210A7;0x000210A8;0x000210AD;0x000210AE;0x000210B0;0x000210B1;0x000210B3;0x000210B3" description="信源恢复正常" relatedInfo=""/>  
+  <warning id="0x000210A1" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="信源中断" relatedInfo=""/>  
+  <warning id="0x000210A2" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="信源持续中断" enabled="0" relatedInfo=""/>  
+  <warning id="0x000210A3" level="warning" belong="live" type="SOURCE" category="ET_Source" current="0" description="信源中断待切换" relatedInfo=""/>  
+  <warning id="0x000210A7" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Program ID丢失" relatedInfo=""/>  
+  <warning id="0x000210A8" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Program ID持续丢失" enabled="0" relatedInfo=""/>  
+  <warning id="0x000210A9" level="warning" belong="live" type="SOURCE" category="ET_Source" current="0" description="Program ID丢失待切换" relatedInfo=""/>  
+  <warning id="0x000210AD" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Video丢失" relatedInfo=""/>  
+  <warning id="0x000210AE" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Video持续丢失" enabled="0" relatedInfo=""/>  
+  <warning id="0x000210AF" level="warning" belong="live" type="SOURCE" category="ET_Source" current="0" pair="none" description="Video丢失待切换" relatedInfo=""/>  
+  <warning id="0x000210B0" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Audio丢失" relatedInfo=""/>  
+  <warning id="0x000210B1" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Audio持续丢失" enabled="0" relatedInfo=""/>  
+  <warning id="0x000210B2" level="warning" belong="live" type="SOURCE" category="ET_Source" current="0" pair="none" description="Audio丢失待切换" relatedInfo=""/>  
+  <warning id="0x000210B3" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="连续计数器（CC）错误" relatedInfo=""/>  
+  <warning id="0x000210B4" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="连续计数器（CC）持续错误" enabled="0" relatedInfo=""/>  
+  <warning id="0x000210B5" level="warning" belong="live" type="SOURCE" category="ET_Source" current="0" pair="none" description="连续计数器（CC）错误待切换" relatedInfo=""/>  
+  <warning id="0x000210FF" level="notify" belong="live" type="SOURCE" category="ET_Source" current="0" pair="none" description="信源切换发生" relatedInfo=""/>  
+  <warning id="0x00021EA0" level="notify" belong="live/core" type="SOURCE" category="ET_Source" pair="close" pair_id="0x00021EA1;0x00021EA2;0x00021EA7;0x00021EA8;0x00021EAD;0x00021EAE;0x00021EB0;0x00021EB1;0x00021EB3;0x00021EB3" description="垫信源恢复正常" relatedInfo="n/a"/>  
+  <warning id="0x00021FA0" level="notify" belong="live/core" type="SOURCE" category="ET_Source" pair="close" pair_id="0x00021FA1;0x00021FA2;0x00021FA7;0x00021FA8;0x00021FAD;0x00021FAE;0x00021FB0;0x00021FB1;0x00021FB3;0x00021FB3" description="备信源恢复正常" relatedInfo="n/a"/>  
+  <warning id="0x00021EA1" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="垫信源中断" relatedInfo="n/a"/>  
+  <warning id="0x00021FA1" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="备信源中断" relatedInfo="n/a"/>  
+  <warning id="0x00021EA2" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="垫信源持续中断" relatedInfo="n/a"/>  
+  <warning id="0x00021FA2" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="备信源持续中断" relatedInfo="n/a"/>  
+  <warning id="0x00021EA3" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="垫信源中断，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021FA3" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="备信源中断，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021EA4" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="垫信源PAT表丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021FA4" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="备信源PAT表丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021EA5" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="垫信源PAT表持续丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021FA5" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="备信源PAT表持续丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021EA6" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="垫信源PAT表丢失，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021FA6" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="备信源PAT表丢失，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021EA7" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="垫信源Program ID丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021FA7" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="备信源Program ID丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021EA8" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="垫信源Program ID持续丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021FA8" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="备信源Program ID持续丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021EA9" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="垫信源Program ID丢失，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021FA9" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="备信源Program ID丢失，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021EAA" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="垫信源PMT表丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021FAA" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="备信源PMT表丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021EAB" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="垫信源PMT表持续丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021FAB" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="备信源PMT表持续丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021EAC" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="垫信源PMT表丢失，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021FAC" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="备信源PMT表丢失，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021EAD" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="垫信源视频流丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021FAD" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="备信源视频流丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021EAE" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="垫信源视频流持续丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021FAE" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="备信源视频流持续丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021EAF" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="垫信源视频流丢失，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021FAF" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="备信源视频流丢失，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021EB0" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="垫信源音频流丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021FB0" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="备信源音频流丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021EB1" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="垫信源音频流持续丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021FB1" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="备信源音频流持续丢失" relatedInfo="n/a"/>  
+  <warning id="0x00021EB2" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="垫信源音频流丢失，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021FB2" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="备信源音频流丢失，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021EB3" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="垫信源连续计数错误" relatedInfo="n/a"/>  
+  <warning id="0x00021FB3" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="备信源音连续计数错误" relatedInfo="n/a"/>  
+  <warning id="0x00021EB4" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="垫信源连续计数持续错误" relatedInfo="n/a"/>  
+  <warning id="0x00021FB4" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="备信源连续计数持续错误" relatedInfo="n/a"/>  
+  <warning id="0x00021EB5" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="垫信源连续计数持续错误，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021FB5" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="备信源连续计数持续错误，待切换" relatedInfo="n/a"/>  
+  <warning id="0x00021E12" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="垫Program ID改变" relatedInfo="n/a"/>  
+  <warning id="0x00021F12" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="备Program ID改变" relatedInfo="n/a"/>  
+  <warning id="0x00021E13" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="垫PMT PID发生改变" relatedInfo="n/a"/>  
+  <warning id="0x00021F13" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="备PMT PID发生改变" relatedInfo="n/a"/>  
+  <warning id="0x00021E14" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="垫Video PID发生改变" relatedInfo="n/a"/>  
+  <warning id="0x00021F14" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="备Video PID发生改变" relatedInfo="n/a"/>  
+  <warning id="0x00021E15" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="垫Audio PID发生改变" relatedInfo="n/a"/>  
+  <warning id="0x00021F15" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="备Audio PID发生改变" relatedInfo="n/a"/>  
+  <warning id="0x00021E16" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="垫Video类型发生改变" relatedInfo="n/a"/>  
+  <warning id="0x00021F16" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="备Video类型发生改变" relatedInfo="n/a"/>  
+  <warning id="0x00021E17" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="垫Audio类型发生改变" relatedInfo="n/a"/>  
+  <warning id="0x00021F17" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="备Audio类型发生改变" relatedInfo="n/a"/>  
+  <!-- MP4 splitter-->  
+  <warning id="0x80022006" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="非法的MP4输入文件" relatedInfo="n/a"/>  
+  <warning id="0x80022007" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="输入MP4文件解析器不支持CMOV box" relatedInfo="n/a"/>  
+  <warning id="0x80022008" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="输入MP4文件解析器不支持Fragment MP4" relatedInfo="n/a"/>  
+  <warning id="0x80022009" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件中没有包含moov box" relatedInfo="n/a"/>  
+  <warning id="0x8002200A" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件中没有包含mvhd box" relatedInfo="n/a"/>  
+  <warning id="0x8002200B" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件中没有包含trak box" relatedInfo="n/a"/>  
+  <warning id="0x8002200C" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件中没有包含tkhd box" relatedInfo="n/a"/>  
+  <warning id="0x8002200D" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件中没有包含mdhd box" relatedInfo="n/a"/>  
+  <warning id="0x8002200E" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件中没有包含stsd box" relatedInfo="n/a"/>  
+  <warning id="0x8002200F" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件中没有包含stts box" relatedInfo="n/a"/>  
+  <warning id="0x80022010" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件中没有包含stsz box" relatedInfo="n/a"/>  
+  <warning id="0x80022011" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件中没有包含stsc box" relatedInfo="n/a"/>  
+  <warning id="0x80022012" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件中没有包含stso/co64 box" relatedInfo="n/a"/>  
+  <warning id="0x80022013" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件非法的stsd" relatedInfo="n/a"/>  
+  <warning id="0x80022014" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件非法的stts" relatedInfo="n/a"/>  
+  <warning id="0x80022015" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件非法的stsz" relatedInfo="n/a"/>  
+  <warning id="0x80022016" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件非法的stsc" relatedInfo="n/a"/>  
+  <warning id="0x80022017" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="输入MP4文件非法的stso/co64" relatedInfo="n/a"/>  
+  <warning id="0x80022018" level="error" belong="core" type="TASK" category="ET_Input" pair="none" description="源文件存在大量的数据错误" relatedInfo="n/a"/>  
+  <warning id="0x00022018" level="warning" belong="core" type="TASK" category="ET_Input" pair="none" description="源文件存在数据错误" relatedInfo="n/a"/>  
+  <warning id="0x80022019" level="error" belong="core" type="TASK" category="ET_Input" pair="none" description="源文件存在大量的时间戳不连续错误" relatedInfo="n/a"/>  
+  <warning id="0x00022019" level="warning" belong="core" type="TASK" category="ET_Input" pair="none" description="源文件存在时间戳不连续错误" relatedInfo="n/a"/>  
+  <!-- ASF splitter-->  
+  <warning id="0x80023006" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="非法的输入文件" relatedInfo="n/a"/>  
+  <warning id="0x80023007" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="输入文件缺失EBML" relatedInfo="n/a"/>  
+  <warning id="0x80023008" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="输入文件非法EBML" relatedInfo="n/a"/>  
+  <warning id="0x80023009" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="输入文件缺失track" relatedInfo="n/a"/>  
+  <!-- MXF splitter-->  
+  <warning id="0x80027008" level="error" belong="core" type="TASK" category="ET_Input" pair="none" description="源文件存在大量的数据错误" relatedInfo="n/a"/>  
+  <warning id="0x80027009" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="源文件无法切片" relatedInfo="n/a"/>  
+  <!-- ArcDemux for Analyzer 0x80028001 -->  
+  <!-- FLV splitter-->  
+  <warning id="0x80025006" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="非法的FLV输入文件" relatedInfo="n/a"/>  
+  <warning id="0x80025007" level="error" belong="live" type="TASK" category="ET_Parse" pair="none" description="非法的的FLV流" relatedInfo="n/a"/>  
+  <warning id="0x80025008" level="error" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="输入文件数据错误或者丢失" relatedInfo="n/a"/>  
+  <warning id="0x8002500A" level="error" belong="live" type="TASK" category="ET_Parse" pair="none" description="输入文件/流时间戳跳变" relatedInfo="n/a"/>  
+  <warning id="0x0002500B" level="warning" belong="live" type="TASK" category="ET_Parse" pair="open" pair_id="0x0002500C" description="视频队列满，编码器性能不足或者输入源无视频" relatedInfo="n/a"/>  
+  <warning id="0x0002500C" level="notify" belong="live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002500B" description="视频队列满恢复正常" relatedInfo="n/a"/>  
+  <warning id="0x0002500D" level="warning" belong="live" type="TASK" category="ET_Parse" pair="open" pair_id="0x0002500E" description="音频队列满，编码器性能不足或者输入源无音频" relatedInfo="n/a"/>  
+  <warning id="0x0002500E" level="notify" belong="live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002500D" description="音频队列满恢复正常" relatedInfo="n/a"/>  
+  <!-- Media splitter-->  
+  <warning id="0x80020000" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="初始化错误" relatedInfo="n/a"/>  
+  <warning id="0x80020002" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80020004" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="PTS错误" relatedInfo="n/a"/>  
+  <warning id="0x80020005" level="error" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="IO报错" relatedInfo="n/a"/>  
+  <warning id="0x80020006" level="error" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="打开输入地址失败" relatedInfo="n/a"/>  
+  <warning id="0x80020007" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="音视频流信息错误" relatedInfo="n/a"/>  
+  <warning id="0x80020008" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="没有音视频流" relatedInfo="n/a"/>  
+  <warning id="0x8002000B" level="warning" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="无法找到可匹配的视频 pid或者是无法获取频道信息" relatedInfo="n/a"/>  
+  <warning id="0x8002000C" level="warning" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="无法找到可匹配的音频 pid或者是无法获取频道信息" relatedInfo="n/a"/>  
+  <warning id="0x8002000F" level="error" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="单位时间内读取数据hang" relatedInfo="n/a"/>  
+  <warning id="0x00020000" level="warning" belong="live" type="TASK" category="ET_Parse" pair="none" pair_id="0x0002500C" description="初始化错误" relatedInfo="n/a"/>  
+  <warning id="0x00020003" level="warning" belong="live" type="SOURCE" category="ET_Input" pair="none" description="超时" relatedInfo="n/a"/>  
+  <warning id="0x00020004" level="warning" belong="live" type="TASK" category="ET_Parse" pair="none" description="PTS错误" relatedInfo="n/a"/>  
+  <warning id="0x00020006" level="warning" belong="live" type="TASK" category="ET_Parse" pair="none" description="打开输入地址失败" relatedInfo="n/a"/>  
+  <warning id="0x00020007" level="warning" belong="live" type="TASK" category="ET_Parse" pair="none" description="音视频流信息错误" relatedInfo="n/a"/>  
+  <warning id="0x00020008" level="warning" belong="live" type="TASK" category="ET_Parse" pair="none" description="没有音视频流" relatedInfo="n/a"/>  
+  <warning id="0x00020009" level="warning" belong="live" type="SOURCE" category="ET_Input" pair="none" description="开始/持续断流" relatedInfo="n/a"/>  
+  <warning id="0x0002000A" level="warning" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="无法收到数据重启ffmpeg engineer," relatedInfo="n/a"/>  
+  <warning id="0x0002000D" level="warning" belong="live" type="TASK" category="ET_Parse" pair="open" pair_id="0x0002000E" description="发送队列满告警" relatedInfo="n/a"/>  
+  <warning id="0x0002000E" level="warning" belong="live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002000D" description="发送队列告警解除" relatedInfo="n/a"/>  
+  <!-- RTP splitter-->  
+  <warning id="0x00026011" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00026012" description="视频RTP流Sequence Number不连续" relatedInfo=""/>  
+  <warning id="0x00026012" level="notify" belong="live" type="SOURCE" category="ET_Source" pair="close" pair_id="0x00026011" description="视频RTP流Sequence Number不连续已恢复" relatedInfo=""/>  
+  <warning id="0x00026018" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00026019" description="音频RTP流Sequence Number不连续" relatedInfo=""/>  
+  <warning id="0x00026019" level="notify" belong="live" type="SOURCE" category="ET_Source" pair="close" pair_id="0x00026018" description="音频RTP流Sequence Number不连续已恢复" relatedInfo=""/>  
+  <warning id="0x0002601A" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x0002601B" description="RTP流Sequence Number不连续" relatedInfo=""/>  
+  <warning id="0x0002601B" level="notify" belong="live" type="SOURCE" category="ET_Source" pair="close" pair_id="0x0002601A" description="RTP流Sequence Number不连续已恢复" relatedInfo=""/>  
+  <warning id="0x000260A0" level="notify" belong="live" type="SOURCE" category="ET_Source" pair="close" pair_id="0x000260A1;0x000260A2;0x000260A3;0x000260AD;0x000260AE" description="信源恢复正常" relatedInfo=""/>  
+  <warning id="0x000260A1" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000260A0" description="信源中断" relatedInfo=""/>  
+  <warning id="0x000260A2" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000260A0" description="信源持续中断" enabled="0" relatedInfo=""/>  
+  <warning id="0x000260A3" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000260A0" current="0" description="信源中断待切换" relatedInfo=""/>  
+  <warning id="0x000260AD" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000260A0" description="视频RTP流视频流丢失" relatedInfo=""/>  
+  <warning id="0x000260AE" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000260A0" description="视频RTP流视频流丢失持续" relatedInfo=""/>  
+  <!-- MXF splitter-->  
+  <warning id="0x80027008" level="error" belong="core" type="TASK" category="ET_Input" pair="none" description="源文件存在大量的数据错误" relatedInfo="n/a"/>  
+  <warning id="0x80027009" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="源文件无法切片" relatedInfo="n/a"/>  
+  <!-- ArcDemux for Analyzer 0x80028001 -->  
+  <!-- Subtitle Parser 0x80029XXX-->  
+  <warning id="0x80029001" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="不支持的Teletext类型" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80029002" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="不支持的DVBSubtitle类型" needHandle="true" relatedInfo="n/a"/>  
+  <!-- TS Muxer -->  
+  <warning id="0x80071006" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="TS复用器不支持输出的音频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80071007" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="TS复用器不支持输出的视频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80071008" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="TS复用器不支持输出的字幕流格式" relatedInfo="n/a"/>  
+  <warning id="0x80071009" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="TS复用器不支持输出音频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007100A" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="TS复用器不支持输出视频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007100B" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="TS复用器不支持输出字幕流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007100C" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="AV长度不匹配" relatedInfo="n/a"/>  
+  <warning id="0x8007100D" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="无效的TS输出PID设置" relatedInfo="n/a"/>  
+  <warning id="0x8007100E" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="无效的TS输出码率设置" relatedInfo="n/a"/>  
+  <warning id="0x8007100F" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="TS复用器不支持MPTS输出流" relatedInfo="n/a"/>  
+  <warning id="0x80071010" level="error" belong="live/core" type="TASK" category="ET_Output" pair="open" pair_id="0x80071012" description="TS输出复用器输入音频流丢失" relatedInfo="n/a"/>  
+  <warning id="0x80071011" level="error" belong="live/core" type="TASK" category="ET_Output" pair="open" pair_id="0x80071013" description="TS输出复用器输入音频流丢失" relatedInfo="n/a"/>  
+  <warning id="0x80071012" level="notify" belong="live/core" type="TASK" category="ET_Output" pair="close" pair_id="0x80071010" description="TS输出复用器输入音频流恢复" relatedInfo="n/a"/>  
+  <warning id="0x80071013" level="notify" belong="live/core" type="TASK" category="ET_Output" pair="close" pair_id="0x80071011" description="TS输出复用器输入视频频流恢复" relatedInfo="n/a"/>  
+  <warning id="0x80071014" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="音视频码率设置与总码率设置冲突" relatedInfo="n/a"/>  
+  <warning id="0x80071016" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="获取DRM Key失败" relatedInfo="n/a"/>  
+  <!-- MP4 Muxer -->  
+  <warning id="0x80072001" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="打开输出文件失败" relatedInfo="n/a"/>  
+  <warning id="0x80072005" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="写文件失败" relatedInfo="n/a"/>  
+  <warning id="0x80072006" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MP4复用器不支持输出的音频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80072007" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MP4复用器不支持输出的视频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80072008" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MP4复用器不支持输出的字幕流格式" relatedInfo="n/a"/>  
+  <warning id="0x80072009" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MP4复用器不支持输出音频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007200A" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MP4复用器不支持输出视频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007200B" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MP4复用器不支持输出字幕流的数量" relatedInfo="n/a"/>  
+  <warning id="0x0007200C" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MP4复用器收到的音视频时间戳相差太大" relatedInfo="n/a"/>  
+  <warning id="0x0007200D" level="notify" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MP4输出转码结束,处理临时文件通知(1次/秒)，防止误判为hang，不要web显示" relatedInfo="n/a"/>  
+  <warning id="0x8007200E" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Audio流文件异常，没有发现stts" relatedInfo="n/a"/>  
+  <warning id="0x8007200F" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Video流文件异常，没有发现stts" relatedInfo="n/a"/>  
+  <warning id="0x80072010" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="存储出错，读文件失败" relatedInfo="n/a"/>  
+  <warning id="0x80072011" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="存储出错，Flush文件失败" relatedInfo="n/a"/>  
+  <warning id="0x80072012" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="存储出错，Close文件失败" relatedInfo="n/a"/>  
+  <!-- FLV Muxer -->  
+  <warning id="0x80073006" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="FLV复用器不支持输出的音频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80073007" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="FLV复用器不支持输出的视频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80073008" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="FLV复用器不支持输出的字幕流格式" relatedInfo="n/a"/>  
+  <warning id="0x80073009" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="FLV复用器不支持输出音频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007300A" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="FLV复用器不支持输出视频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007300B" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="FLV复用器不支持输出字幕流的数量" relatedInfo="n/a"/>  
+  <warning id="0x00073006" level="warning" belong="live" type="TASK" category="ET_Output" pair="none" description="FLV复用器不支持输出的音频流格式" relatedInfo="n/a"/>  
+  <warning id="0x00073007" level="warning" belong="live" type="TASK" category="ET_Output" pair="none" description="FLV复用器不支持输出的视频流格式" relatedInfo="n/a"/>  
+  <warning id="0x0007300C" level="warning" belong="live" type="TASK" category="ET_Output" pair="none" description="连接RTMP服务器失败" relatedInfo="n/a"/>  
+  <warning id="0x0007300D" level="warning" belong="live" type="TASK" category="ET_Output" pair="none" description="RTMP发送给服务器过慢，在#{duration}毫秒内产生#{count}个告警" relatedInfo="n/a"/>  
+  <warning id="0x0007300E" level="warning" belong="live" type="TASK" category="ET_Output" pair="none" description="RTMP发送缓冲器全满，清空缓冲区" relatedInfo="n/a"/>  
+  <warning id="0x0007300F" level="warning" belong="live" type="TASK" category="ET_Output" pair="none" description="RTMP发送缓冲器较满，丢B帧" relatedInfo="n/a"/>  
+  <warning id="0x00073011" level="notify" belong="live/core" type="TASK" category="ET_Output" enabled="0" pair="none" description="转码结束,处理临时文件通知(1次/秒)，防止误判为hang，不要web显示" relatedInfo="n/a"/>  
+  <warning id="0x00073020" level="notify" belong="live" type="TASK" category="ET_Output" pair="close" pair_id="0x0007300D" description="RTMP发送正常" relatedInfo="n/a"/>  
+  <!-- AVI Muxer, dropped -->  
+  <warning id="0x80074006" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="AVI复用器不支持输出的音频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80074007" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="AVI复用器不支持输出的视频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80074008" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="AVI复用器不支持输出的字幕流格式" relatedInfo="n/a"/>  
+  <warning id="0x80074009" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="AVI复用器不支持输出音频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007400A" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="AVI复用器不支持输出视频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007400B" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="AVI复用器不支持输出字幕流的数量" relatedInfo="n/a"/>  
+  <!-- MKV Muxer, dropped, replaced by MediaMuxer -->  
+  <warning id="0x80075006" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MKV复用器不支持输出的音频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80075007" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MKV复用器不支持输出的视频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80075008" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MKV复用器不支持输出的字幕流格式" relatedInfo="n/a"/>  
+  <warning id="0x80075009" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MKV复用器不支持输出音频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007500A" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MKV复用器不支持输出视频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007500B" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MKV复用器不支持输出字幕流的数量" relatedInfo="n/a"/>  
+  <!-- PS Muxer, dropped, replaced by MediaMuxer -->  
+  <warning id="0x80076006" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="PS复用器不支持输出的音频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80076007" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="PS复用器不支持输出的视频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80076008" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="PS复用器不支持输出的字幕流格式" relatedInfo="n/a"/>  
+  <warning id="0x80076009" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="PS复用器不支持输出音频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007600A" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="PS复用器不支持输出视频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007600B" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="PS复用器不支持输出字幕流的数量" relatedInfo="n/a"/>  
+  <!-- ASF Muxer -->  
+  <warning id="0x80077006" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="ASF复用器不支持输出的音频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80077007" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="ASF复用器不支持输出的视频流格式" relatedInfo="n/a"/>  
+  <warning id="0x80077008" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="ASF复用器不支持输出的字幕流格式" relatedInfo="n/a"/>  
+  <warning id="0x80077009" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="ASF复用器不支持输出音频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007700A" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="PS复用器不支持输出视频流的数量" relatedInfo="n/a"/>  
+  <warning id="0x8007700B" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="PS复用器不支持输出字幕流的数量" relatedInfo="n/a"/>  
+  <!-- MXF Muxer -->  
+  <warning id="0x80078001" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF复用器创建输出文件失败" relatedInfo="n/a"/>  
+  <warning id="0x80078005" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF复用器写文件失败" relatedInfo="n/a"/>  
+  <warning id="0x8007800C" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF复用器输出的帧率不支持" relatedInfo="n/a"/>  
+  <warning id="0x8007800D" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF复用器输出的audio采样率不支持" relatedInfo="n/a"/>  
+  <warning id="0x0007800E" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF复用器输入的audio数据异常" relatedInfo="n/a"/>  
+  <warning id="0x0007800F" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF复用器切片数据大小超出期望值" relatedInfo="n/a"/>  
+  <warning id="0x00078010" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF复用器切片数据大小未达到期望值" relatedInfo="n/a"/>  
+  <warning id="0x80078011" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF复用器Flush文件失败" relatedInfo="n/a"/>  
+  <warning id="0x80078012" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF复用器Close文件失败" relatedInfo="n/a"/>  
+  <warning id="0x00078013" level="warning" belong="core" type="TASK" category="ET_Output" pair="none" description="MXF复用器输入的Audio时长小于Video，补静音" relatedInfo="n/a"/>  
+  <!-- Media Muxer avi,ps,mkv,wav,ogg-->  
+  <warning id="0x80079005" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MediaMuxer输出写文件失败" relatedInfo="n/a"/>  
+  <warning id="0x80079006" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MediaMuxer输出不支持的音频流" relatedInfo="n/a"/>  
+  <warning id="0x80079007" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MediaMuxer输出不支持的视频流" relatedInfo="n/a"/>  
+  <warning id="0x80079008" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MediaMuxer输出不支持的字幕流" relatedInfo="n/a"/>  
+  <!-- Dash Muxer-->  
+  <warning id="0x8007A001" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="打开输出文件失败" relatedInfo="n/a"/>  
+  <warning id="0x8007A005" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="写文件失败" relatedInfo="n/a"/>  
+  <warning id="0x0007A00D" level="notify" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MP4输出转码结束,处理临时文件通知(1次/秒)，防止误判为hang，不要web显示" relatedInfo="n/a"/>  
+  <warning id="0x8007A00E" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="存储出错，读文件失败" relatedInfo="n/a"/>  
+  <warning id="0x8007A00F" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="存储出错，Flush文件失败" relatedInfo="n/a"/>  
+  <warning id="0x8007A010" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="存储出错，Close文件失败" relatedInfo="n/a"/>  
+  <warning id="0x8007A011" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="获取DRM Key失败" relatedInfo="n/a"/>  
+  <!-- MPD Creator-->  
+  <warning id="0x8007B001" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="打开输出文件失败" relatedInfo="n/a"/>  
+  <warning id="0x8007B005" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="写文件失败" relatedInfo="n/a"/>  
+  <!-- Dump_null_time-->  
+  <warning id="0x00080001" level="warning" belong="core/live" type="TASK" category="ET_Output" pair="open" description="输出断流" pair_id="0x00080003" relatedInfo="n/a"/>  
+  <warning id="0x00080002" level="warning" belong="core/live" type="TASK" category="ET_Output" pair="open" description="输出持续断流" pair_id="0x00080003" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00080003" level="notify" belong="core/live" type="TASK" category="ET_Output" pair="close" description="输出断流恢复" pair_id="0x00080001;0x00080002" relatedInfo="n/a"/>  
+  <warning id="0x80080001" level="error" belong="core/live" type="TASK" category="ET_Output" pair="none" description="输出磁盘满" relatedInfo="n/a"/>  
+  <warning id="0x80080002" level="error" belong="core/live" type="TASK" category="ET_Output" pair="none" description="打开输出文件失败" relatedInfo="n/a"/>  
+  <warning id="0x80080003" level="error" belong="live" type="TASK" category="ET_Output" pair="none" description="打开输出ASI设备失败" relatedInfo="n/a"/>  
+  <warning id="0x80080004" level="error" belong="core/live" type="TASK" category="ET_Output" pair="none" description="设置的文件名过长(&gt;1024)" relatedInfo="n/a"/>  
+  <warning id="0x8008000a" level="error" belong="core/live" type="TASK" category="ET_Output" pair="none" description="IPSend错误" relatedInfo="n/a"/>  
+  <warning id="0x00080005" level="warning" belong="core/live" type="TASK" category="ET_Output" pair="none" description="写文件超时错误" relatedInfo="n/a"/>  
+  <warning id="0x00080006" level="warning" belong="core/live" type="TASK" category="ET_Output" pair="none" description="打开文件超时错误" relatedInfo="n/a"/>  
+  <warning id="0x0008000a" level="warning" belong="core/live" type="TASK" category="ET_Output" pair="open" description="ASI输出延时大" pair_id="0x0008000b" relatedInfo="n/a"/>  
+  <warning id="0x0008000b" level="warning" belong="core/live" type="TASK" category="ET_Output" pair="close" description="ASI输出恢复正常" pair_id="0x0008000a" relatedInfo="n/a"/>  
+  <!-- ArcStreamDump-->  
+  <warning id="0x80081001" level="error" belong="core" type="STORAGE" category="ET_Output" pair="none" description="云转码输出切片存储服务器写入失败" relatedInfo="n/a"/>  
+  <!-- Video Encoder -->  
+  <warning id="0x80050001" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器初始化失败" relatedInfo="n/a"/>  
+  <warning id="0x80050002" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器创建编码器内核失败" relatedInfo="n/a"/>  
+  <warning id="0x80050003" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="输入视频参数不支持" relatedInfo="n/a"/>  
+  <warning id="0x80050004" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="调整参数失败" relatedInfo="n/a"/>  
+  <warning id="0x80050005" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="SRT接口获得失败" relatedInfo="n/a"/>  
+  <warning id="0x80050006" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="设置SRT参数失败" relatedInfo="n/a"/>  
+  <warning id="0x80050007" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器获取输入sample(cpu)buffer失败" relatedInfo="n/a"/>  
+  <warning id="0x80050008" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器获取输出sample失败" relatedInfo="n/a"/>  
+  <warning id="0x80050009" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器获取输出sample的buffer失败" relatedInfo="n/a"/>  
+  <warning id="0x8005000A" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器发送sample失败" relatedInfo="n/a"/>  
+  <warning id="0x8005000B" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="输入和输出都是场不支持帧率改变" relatedInfo="n/a"/>  
+  <warning id="0x8005000C" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="内部设置错误" relatedInfo="n/a"/>  
+  <warning id="0x8005000D" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="内部设置错误" relatedInfo="n/a"/>  
+  <warning id="0x80051000" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="创建预处理实例失败" relatedInfo="n/a"/>  
+  <warning id="0x80051001" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="设置预处理参数失败(通常是load cuda kernel失败)" relatedInfo="n/a"/>  
+  <warning id="0x80051002" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="内部错误，BegineData()失败" relatedInfo="n/a"/>  
+  <warning id="0x80051003" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="台标文件格式不支持，或者解码失败" relatedInfo="n/a"/>  
+  <warning id="0x80051004" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="内部错误，创建cuda context失败" relatedInfo="n/a"/>  
+  <warning id="0x80051005" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器预处理数据失败" relatedInfo="n/a"/>  
+  <warning id="0x80051006" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器内部错误：PreProc_CreateDevide失败" relatedInfo="n/a"/>  
+  <warning id="0x80051007" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器内部错误：预处理不支持" relatedInfo="n/a"/>  
+  <warning id="0x80051008" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="视频编码器内部错误：cuda函数发生崩溃错误" relatedInfo="n/a"/>  
+  <warning id="0x80051009" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器内部错误：cuda 显存不足" relatedInfo="n/a"/>  
+  <warning id="0x8005100A" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器预处理模块初始化失败" relatedInfo="n/a"/>  
+  <warning id="0x8005100B" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器参数错误：repeat帧标记一进多出不一致" relatedInfo="n/a"/>  
+  <warning id="0x8005100C" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器参数错误：抓图路径或者文件不存在" relatedInfo="n/a"/>  
+  <warning id="0x80052000" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器加载内核库失败" relatedInfo="n/a"/>  
+  <warning id="0x80052001" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器创建内核失败" relatedInfo="n/a"/>  
+  <warning id="0x80052002" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器内核设置失败" relatedInfo="n/a"/>  
+  <warning id="0x80052003" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="视频编码内核获得导出接口失败" relatedInfo="n/a"/>  
+  <warning id="0x80052004" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码格式不支持" relatedInfo="n/a"/>  
+  <warning id="0x80052005" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="编码内核设置失败" relatedInfo="n/a"/>  
+  <warning id="0x80052006" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="编码内核运行失败" relatedInfo="n/a"/>  
+  <warning id="0x80052007" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器送数据内核失败" relatedInfo="n/a"/>  
+  <warning id="0x80052008" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="编码内核显存不足" relatedInfo="n/a"/>  
+  <warning id="0x80053000" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="视频编码cuda错误：cuInt失败" relatedInfo="n/a"/>  
+  <warning id="0x80053001" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="视频编码cuda错误：cuDeviceGetCount错误" relatedInfo="n/a"/>  
+  <warning id="0x80053002" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="未查询到cuda device" relatedInfo="n/a"/>  
+  <warning id="0x80053003" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuDeviceGet返回失败" relatedInfo="n/a"/>  
+  <warning id="0x80053004" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuDeviceGetname返回失败" relatedInfo="n/a"/>  
+  <warning id="0x80053005" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuDeviceComputeCapability返回错误" relatedInfo="n/a"/>  
+  <warning id="0x80053006" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda deviceID设置错误" relatedInfo="n/a"/>  
+  <warning id="0x80053007" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="显卡不支持硬件编码" relatedInfo="n/a"/>  
+  <warning id="0x80053008" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="创建cuda stream失败" relatedInfo="n/a"/>  
+  <warning id="0x80053009" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="创建cuda context失败" relatedInfo="n/a"/>  
+  <warning id="0x8005300A" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="显存不足" relatedInfo="n/a"/>  
+  <warning id="0x8005300B" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="内存不足" relatedInfo="n/a"/>  
+  <warning id="0x8005300C" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuda显存拷贝函数返回错误" relatedInfo="n/a"/>  
+  <warning id="0x8005300D" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuda显存拷贝函数返回错误" relatedInfo="n/a"/>  
+  <warning id="0x8005300E" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuda显存拷贝函数返回错误" relatedInfo="n/a"/>  
+  <warning id="0x8005300F" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="编码格式不支持" relatedInfo="n/a"/>  
+  <warning id="0x80053010" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="编码格式不支持" relatedInfo="n/a"/>  
+  <warning id="0x80053011" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码内部设置错误" relatedInfo="n/a"/>  
+  <warning id="0x80053012" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码不支持所设置的profile" relatedInfo="n/a"/>  
+  <warning id="0x80053013" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码不支持输入的格式" relatedInfo="n/a"/>  
+  <warning id="0x80053014" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="ET_Internal" relatedInfo="n/a"/>  
+  <warning id="0x80053015" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="质量级别设置错误" relatedInfo="n/a"/>  
+  <warning id="0x80053016" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="参考帧个数超过4个" relatedInfo="n/a"/>  
+  <warning id="0x80053020" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器内核hang" relatedInfo="n/a"/>  
+  <warning id="0x80053051" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuda编码器内核错误" relatedInfo="n/a"/>  
+  <warning id="0x80053052" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuda编码器内核错误" relatedInfo="n/a"/>  
+  <warning id="0x80053053" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuda编码器内核错误" relatedInfo="n/a"/>  
+  <warning id="0x80053054" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuda编码器内核错误" relatedInfo="n/a"/>  
+  <warning id="0x80053055" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuda编码器内核错误" relatedInfo="n/a"/>  
+  <warning id="0x80053056" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器错误无效指针" relatedInfo="n/a"/>  
+  <warning id="0x80053057" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器错误无效事件" relatedInfo="n/a"/>  
+  <warning id="0x80053058" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuda编码器内核参数错误" relatedInfo="n/a"/>  
+  <warning id="0x80053059" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器错误无效调用" relatedInfo="n/a"/>  
+  <warning id="0x8005305A" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器显存不足" relatedInfo="n/a"/>  
+  <warning id="0x8005305B" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器错误未初始化" relatedInfo="n/a"/>  
+  <warning id="0x8005305C" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器初始化参数错误" relatedInfo="n/a"/>  
+  <warning id="0x8005305D" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器错误" relatedInfo="n/a"/>  
+  <warning id="0x8005305E" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器输出缓冲区太小" relatedInfo="n/a"/>  
+  <warning id="0x8005305F" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器版本错误" relatedInfo="n/a"/>  
+  <warning id="0x80053060" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器错误无效输入缓冲" relatedInfo="n/a"/>  
+  <warning id="0x80053061" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器Need More Input" relatedInfo="n/a"/>  
+  <warning id="0x80053062" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器busy" relatedInfo="n/a"/>  
+  <warning id="0x80053063" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器错误未注册" relatedInfo="n/a"/>  
+  <warning id="0x80053064" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuda编码器内核错误" relatedInfo="n/a"/>  
+  <warning id="0x80053065" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器错误无效license" relatedInfo="n/a"/>  
+  <warning id="0x80053066" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器错误功能未支持" relatedInfo="n/a"/>  
+  <warning id="0x80053067" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器错误" relatedInfo="n/a"/>  
+  <warning id="0x80053068" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器错误" relatedInfo="n/a"/>  
+  <warning id="0x80053069" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda编码器错误" relatedInfo="n/a"/>  
+  <warning id="0x00050015" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频硬件编码内部错误" relatedInfo="n/a"/>  
+  <warning id="0x00050001" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码获得字幕sample的buffer失败" relatedInfo="n/a"/>  
+  <warning id="0x00050002" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码push字幕数据失败" relatedInfo="n/a"/>  
+  <warning id="0x00050003" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码接收数据时间戳回退" relatedInfo="n/a"/>  
+  <warning id="0x00050004" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器长时间无输出" relatedInfo="n/a"/>  
+  <warning id="0x00050005" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器长时间无输入" relatedInfo="n/a"/>  
+  <warning id="0x00050006" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="视频编码器处理时间过长" relatedInfo="n/a"/>  
+  <warning id="0x00051001" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="编码器抓图失败" relatedInfo="n/a"/>  
+  <warning id="0x00051002" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="编码器保存抓图文件失败" relatedInfo="n/a"/>  
+  <warning id="0x00051003" level="warning" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="图标或台标文件不存在或打开失败" relatedInfo="n/a"/>  
+  <warning id="0x00051004" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="图标或台标文件格式不支持" relatedInfo="n/a"/>  
+  <warning id="0x00051005" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="图标或台标文件解码失败" relatedInfo="n/a"/>  
+  <warning id="0x00051006" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="图标或台标文件读取错误" relatedInfo="n/a"/>  
+  <warning id="0x00051007" level="notify" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="图文包装滚动结束" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00053000" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" current="0" pair="none" description="H264硬件编码不支持，自动切换到软件编码" relatedInfo="n/a"/>  
+  <warning id="0x00053001" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" current="0" pair="none" description="编码器质量级别使用Default QualityLevel" relatedInfo="n/a"/>  
+  <warning id="0x00053002" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" current="0" pair="none" description="编码器输出buffer过小，输出分辨率请勿选用跟随源" relatedInfo="n/a"/>  
+  <warning id="0x00053003" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" current="0" pair="none" description="编码器内核参数出错，重复前一帧" relatedInfo="n/a"/>  
+  <warning id="0x80054100" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡编码失败" relatedInfo="n/a"/>  
+  <warning id="0x80054101" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡API加载失败，可能是驱动错误" relatedInfo="n/a"/>  
+  <warning id="0x80054102" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡编码资源不够，路数超出板卡能力" relatedInfo="n/a"/>  
+  <warning id="0x80054103" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡重置失败" relatedInfo="n/a"/>  
+  <warning id="0x80054104" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡初始化设备失败" relatedInfo="n/a"/>  
+  <warning id="0x80054105" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡启动设备失败" relatedInfo="n/a"/>  
+  <warning id="0x80054106" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡退出设备失败" relatedInfo="n/a"/>  
+  <warning id="0x80054107" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡注册回调函数失败" relatedInfo="n/a"/>  
+  <warning id="0x80054108" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡设置编码分辨率不支持" relatedInfo="n/a"/>  
+  <warning id="0x80054109" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡设置GOP大小不支持" relatedInfo="n/a"/>  
+  <warning id="0x8005410A" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡设置B帧数目不支持" relatedInfo="n/a"/>  
+  <warning id="0x8005410B" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡设置编码等级错误" relatedInfo="n/a"/>  
+  <warning id="0x80054200" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="研华H265卡编码过程未知错误" relatedInfo="n/a"/>  
+  <warning id="0x80057001" level="error" belong="live/core" type="TASK" category="ET_AVS2Enc" pair="none" description="双节点编码，连接从节点server控制端口失败，请检查avs2_socket_server是否有权限或是否启动" relatedInfo="n/a"/>  
+  <warning id="0x80057002" level="error" belong="live/core" type="TASK" category="ET_AVS2Enc" pair="none" description="双节点编码，连接从节点编码器数据端口失败，请检查avs2_socket_encoder是否有运行权限等" relatedInfo="n/a"/>  
+  <warning id="0x80057003" level="error" belong="live/core" type="TASK" category="ET_AVS2Enc" pair="none" description="双节点编码，与从节点数据传输错误" relatedInfo="n/a"/>  
+  <warning id="0x80057004" level="error" belong="live/core" type="TASK" category="ET_AVS2Enc" pair="none" description="主节点创建AVS2编码内核失败" relatedInfo="n/a"/>  
+  <warning id="0x00057005" level="warning" belong="live/core" type="TASK" category="ET_AVS2Enc" pair="none" description="主节点缺少有效avs2_license" relatedInfo="n/a"/>  
+  <warning id="0x00057006" level="warning" belong="live/core" type="TASK" category="ET_AVS2Enc" pair="none" description="双节点编码，从节点缺少有效avs2_license" relatedInfo="n/a"/>  
+  <warning id="0x00056001" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="GOP大小设置不正确，编码器修改GOP" relatedInfo="n/a"/>  
+  <!-- audio decoder -->  
+  <warning id="0x80048000" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="音频解码器内核库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80048001" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="音频解码库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80048002" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="AAC解码库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80048003" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="DDP解码库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80048004" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="TrueHD解码库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80048005" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="MPA解码库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80040001" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="AVCODEC创建失败" relatedInfo="n/a"/>  
+  <warning id="0x80040002" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="AVCODEC配置失败" relatedInfo="n/a"/>  
+  <warning id="0x80040003" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="AAC解码库失败" relatedInfo="n/a"/>  
+  <!-- audio encoder -->  
+  <warning id="0x80068000" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Audio编码内核加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80068001" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="AACPLUS库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80068002" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="DDP库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80068003" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Boost库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80068004" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="AudioEnc编码库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80068005" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="MP2编码库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80068006" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="MP3编码加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80068007" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="WMA编码库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80068008" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="AudioBalance库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80060001" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="AACPLUS编码库加载失败" relatedInfo="n/a"/>  
+  <warning id="0x80060002" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="AACPLUS编码库初始化失败" relatedInfo="n/a"/>  
+  <warning id="0x80060003" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="AMR编码库初始化失败" relatedInfo="n/a"/>  
+  <warning id="0x80060004" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="AMRWB编码库初始化失败" relatedInfo="n/a"/>  
+  <warning id="0x80060005" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="DDP编码库创建失败" relatedInfo="n/a"/>  
+  <warning id="0x80060006" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="DDP编码库初始化失败" relatedInfo="n/a"/>  
+  <warning id="0x80060007" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="AudioBoost创建失败" relatedInfo="n/a"/>  
+  <warning id="0x80060008" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="音频编码器创建失败" relatedInfo="n/a"/>  
+  <warning id="0x80060009" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="音频编码器配置失败" relatedInfo="n/a"/>  
+  <warning id="0x8006000A" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="MP2 Audio编码内核创建失败" relatedInfo="n/a"/>  
+  <warning id="0x8006000B" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="MP2 Audio编码实例初始化失败" relatedInfo="n/a"/>  
+  <warning id="0x8006000C" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="MP3 编码内核创建失败" relatedInfo="n/a"/>  
+  <warning id="0x8006000D" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="MP3 编码内核初始化失败" relatedInfo="n/a"/>  
+  <warning id="0x8006000E" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="WMA 编码内核创建失败" relatedInfo="n/a"/>  
+  <warning id="0x8006000F" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="WMA 编码内核初始化失败" relatedInfo="n/a"/>  
+  <warning id="0x80060010" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="DTS License 无效" relatedInfo="n/a"/>  
+  <warning id="0x80060011" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="DTS 采样率错误" relatedInfo="n/a"/>  
+  <warning id="0x80060012" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="DTS 比特率错误" relatedInfo="n/a"/>  
+  <warning id="0x80060013" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="DTS 设置错误" relatedInfo="n/a"/>  
+  <!-- libuploadtask.so -->  
+  <warning id="0x00085001" level="warning" belong="live/core" type="TASK" category="ET_httpUpload" pair="open" pair_id="0x00085101" description="HTTP上传服务器无法连接" relatedInfo="n/a"/>  
+  <warning id="0x00085002" level="warning" belong="live/core" type="TASK" category="ET_httpUpload" pair="open" pair_id="0x00085102" description="切片上传失败" relatedInfo="n/a"/>  
+  <warning id="0x00085003" level="warning" belong="live/core" type="TASK" category="ET_httpUpload" pair="open" pair_id="0x00085102" description="切片上传超时（切片上传时间超过指定时间）" relatedInfo="n/a"/>  
+  <warning id="0x00085004" level="warning" belong="live/core" type="TASK" category="ET_httpUpload" pair="open" pair_id="0x00085104" description="删除切片失败，请检查编码服务器与切片存储的网络连接是否正常/发布的目录是否在存储上存在" relatedInfo="n/a"/>  
+  <warning id="0x00085101" level="notify" belong="live/core" type="TASK" category="ET_httpUpload" pair="close" pair_id="0x00085001" description="HTTP上传服务器连接恢复正常" relatedInfo="n/a"/>  
+  <warning id="0x00085102" level="notify" belong="live/core" type="TASK" category="ET_httpUpload" pair="close" pair_id="0x00085002;0x00085003" description="切片上传恢复正常" relatedInfo="n/a"/>  
+  <warning id="0x00085104" level="notify" belong="live/core" type="TASK" category="ET_httpUpload" pair="close" pair_id="0x00085004" description="切片删除恢复正常" relatedInfo="n/a"/>  
+  <!-- ASVID -->  
+  <warning id="0x80030001" level="error" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" description="视频解码器输出未连接" relatedInfo="n/a"/>  
+  <warning id="0x80030003" level="error" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" description="视频解码器输出Buffer小于图像尺寸" relatedInfo="n/a"/>  
+  <warning id="0x80030006" level="error" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" description="视频解码器配置失败" relatedInfo="n/a"/>  
+  <warning id="0x80030007" level="error" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" description="视频解码器解码连续丢帧" relatedInfo="n/a"/>  
+  <warning id="0x00030002" level="warning" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" current="0" description="视频解码器接受Sample失败" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00030005" level="warning" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" current="0" description="视频解码器获取buffer失败" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00030006" level="warning" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" current="0" description="视频解码器配置硬解失败启用软解" enabled="0" relatedInfo="n/a"/>  
+  <!-- graphtransdump -->  
+  <warning id="0x00081001" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00081007" description="信源中断开始(无video/audio)" relatedInfo="n/a"/>  
+  <warning id="0x00081002" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00081007" description="信源中断持续(无video/audio)" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00081003" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00081007" description="信源异常开始(无video)" relatedInfo="n/a"/>  
+  <warning id="0x00081004" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00081007" description="信源异常持续(无video)" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00081005" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00081007" description="信源异常开始(无audio)" relatedInfo="n/a"/>  
+  <warning id="0x00081006" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00081007" description="信源异常持续(无audio)" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00081007" level="notify" belong="live/core" type="SOURCE" category="ET_Source" pair="close" pair_id="0x00081001;0x00081002;0x00081003;0x00081004;0x00081005;0x00081006" description="信源恢复正常" relatedInfo="n/a"/>  
+  <warning id="0x0008100A" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="输出延时" enabled="0" relatedInfo="n/a"/>  
+  <!-- SDI splitter -->  
+  <warning id="0x800F0001" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="SDI splitter分配内存失败" relatedInfo="n/a"/>  
+  <warning id="0x800F0002" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="SDI卡引擎错误(E_SDI_ENGINE_FILE_ERROR)" relatedInfo="n/a"/>  
+  <warning id="0x800F0003" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="板卡设备初始化错误" relatedInfo="n/a"/>  
+  <warning id="0x800F0004" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="SDI卡引擎错误(E_SDI_AUDIO_FILLBUFFER)" relatedInfo="n/a"/>  
+  <warning id="0x800F0005" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="SDI卡引擎错误(E_SDI_VIDEO_FILLBUFFER)" relatedInfo="n/a"/>  
+  <warning id="0x800F0006" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="打开SDI设备失败(无卡/无驱动/设备已被占用等)" relatedInfo="n/a"/>  
+  <warning id="0x800F0007" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="初始化SDI设备失败(无信源/数据错误等)" relatedInfo="n/a"/>  
+  <warning id="0x000F0010" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F0016" description="SDI信源中断(开始）" relatedInfo="n/a"/>  
+  <warning id="0x000F0011" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F0016" description="SDI信源中断（持续）" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x000F0012" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F0016" description="SDI video丢失(开始)" relatedInfo="n/a"/>  
+  <warning id="0x000F0013" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F0016" description="SDI video丢失(持续)" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x000F0014" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F0016" description="SDI audio丢失(开始)" relatedInfo="n/a"/>  
+  <warning id="0x000F0015" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F0016" description="SDI audio丢失(持续)" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x000F0016" level="notify" belong="live/core" type="SOURCE" category="ET_Source" pair="close" pair_id="0x000F0010;0x000F0011;0x000F0012;0x000F0013;0x000F0014;0x000F0015" description="SDI 信源恢复正常" relatedInfo="n/a"/>  
+  <warning id="0x000F0021" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="信源中断(待切换)" relatedInfo="n/a"/>  
+  <warning id="0x000F0022" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="Video丢失(待切换)" relatedInfo="n/a"/>  
+  <warning id="0x000F0023" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="Audio丢失(待切换)" relatedInfo="n/a"/>  
+  <warning id="0x800F8030" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="备信源已存在" relatedInfo="n/a"/>  
+  <warning id="0x800F8031" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="主备相同" relatedInfo="n/a"/>  
+  <warning id="0x800F8032" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="主备信源格式不同" relatedInfo="n/a"/>  
+  <warning id="0x000F8010" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F8016" description="备信源中断(开始)" relatedInfo="n/a"/>  
+  <warning id="0x000F8011" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F8016" description="备信源中断(持续)" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x000F8012" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F8016" description="备Video 丢失(开始)" relatedInfo="n/a"/>  
+  <warning id="0x000F8013" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F8016" description="备Video 丢失(持续)" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x000F8014" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F8016" description="备Audio 丢失(开始)" relatedInfo="n/a"/>  
+  <warning id="0x000F8015" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F8016" description="备Audio 丢失(持续)" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x000F8016" level="notify" belong="live/core" type="SOURCE" category="ET_Source" pair="close" pair_id="0x000F8010;0x000F8011;0x000F8012;0x000F8013;0x000F8014;0x000F8015" description="备信源恢复正常" relatedInfo="n/a"/>  
+  <warning id="0x000F8021" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="备信源中断(待切换)" relatedInfo="n/a"/>  
+  <warning id="0x000F8022" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="备Video 丢失(待切换)" relatedInfo="n/a"/>  
+  <warning id="0x000F8023" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="备Audio 丢失(待切换)" relatedInfo="n/a"/>  
+  <warning id="0x00083110" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00083111" description="#{sdi}信源中断，端口号为#{port}" relatedInfo="n/a"/>  
+  <warning id="0x00083111" level="notify" belong="live/core" type="SOURCE" category="ET_Source" pair="close" pair_id="0x00083110" description="#{sdi}信源恢复，端口号为#{port}" relatedInfo="n/a"/>  
+  <warning id="0x000F0100" level="warning" belong="live" type="TASK" category="ET_Performance" pair="open" pair_id="0x000F0102" description="SDI视频队列满，编码器性能不足或者输入源无视频" needHandle="true" relatedInfo=""/>  
+  <warning id="0x000F0102" level="notify" belong="live" type="TASK" category="ET_Performance" pair="close" pair_id="0x000F0100" description="SDI视频队列恢复正常" relatedInfo=""/>  
+  <warning id="0x000F0101" level="warning" belong="live" type="TASK" category="ET_Performance" pair="open" pair_id="0x000F0103" description="SDI音频队列满，编码器性能不足或者输入源无音频" relatedInfo=""/>  
+  <warning id="0x000F0103" level="notify" belong="live" type="TASK" category="ET_Performance" pair="close" pair_id="0x000F0101" description="SDI音频队列正常" relatedInfo=""/>  
+  <warning id="0x000F0104" level="notify" belong="live" type="TASK" category="ET_Performance" description="SDI视频静帧" relatedInfo=""/>  
+  <warning id="0x000F0200" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="SDI信源视频变化" relatedInfo="n/a"/>  
+  <!-- BD source filter -->  
+  <warning id="0x800A8000" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD输入未知错误" relatedInfo="n/a"/>  
+  <warning id="0x800A8001" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD输入选择的源没有解密" relatedInfo="n/a"/>  
+  <warning id="0x800A8002" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD输入读取文件错误" relatedInfo="n/a"/>  
+  <warning id="0x800A8003" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD输入初始化失败" relatedInfo="n/a"/>  
+  <warning id="0x800A8004" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD输入没有找到playlist" relatedInfo="n/a"/>  
+  <warning id="0x800A8005" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD输入初始化playlist失败" relatedInfo="n/a"/>  
+  <warning id="0x800A8006" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD输入取buffer失败" relatedInfo="n/a"/>  
+  <warning id="0x800A8007" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD输入选取的playlist不可seek" relatedInfo="n/a"/>  
+  <!-- ASDvdVideoSource -->  
+  <warning id="0x800B8000" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD输入未知错误" relatedInfo="n/a"/>  
+  <warning id="0x800B8001" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD输入初始化失败" relatedInfo="n/a"/>  
+  <warning id="0x800B8002" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD输入加载内容失败" relatedInfo="n/a"/>  
+  <warning id="0x800B8003" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD输入读取文件失败" relatedInfo="n/a"/>  
+  <warning id="0x800B8004" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD输入初始化title失败" relatedInfo="n/a"/>  
+  <warning id="0x800B8005" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD输入没有找到title" relatedInfo="n/a"/>  
+  <warning id="0x800B8007" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD输入取buffer失败" relatedInfo="n/a"/>  
+  <warning id="0x800B8008" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD输入选取的title不能seek" relatedInfo="n/a"/>  
+  <warning id="0x800B8009" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD输入 搜寻 title发生错误" relatedInfo="n/a"/>  
+  <!-- libhlscreate.so-->  
+  <warning id="0x80091001" level="error" belong="live/core" type="TASK" category="ET_hlscreate" pair="none" description="m3u8文件打开失败" relatedInfo="n/a"/>  
+  <warning id="0x00091002" level="warning" belong="live/core" type="TASK" category="ET_hlscreate" pair="open" pair_id="0x00091003" description="m3u8文件打开失败" relatedInfo="n/a"/>  
+  <warning id="0x00091003" level="warning" belong="live/core" type="TASK" category="ET_hlscreate" pair="close" pair_id="0x00091002" description="m3u8文件打开失败恢复" relatedInfo="n/a"/>  
+  <!-- libSDIDump.so -->  
+  <warning id="0x00082001" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="open" description="视频输出不及时，可能原因是输入数据网络延迟较大或者设备时钟未校准" pair_id="0x00082002" enable="0" relatedInfo="n/a"/>  
+  <warning id="0x00082002" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="close" description="视频输出恢复正常" pair_id="0x00082001" relatedInfo="n/a"/>  
+  <warning id="0x00082003" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="open" description="音频输出不及时，可能原因是输入数据网络延迟较大或者设备时钟未校准" pair_id="0x00082004" enable="0" relatedInfo="n/a"/>  
+  <warning id="0x00082004" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="close" description="音频输出恢复正常" pair_id="0x00082003" relatedInfo="n/a"/>  
+  <warning id="0x00082005" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="输出严重不及时，可能原因是输入数据网络延迟较大或者设备时钟未校准" relatedInfo="n/a"/>  
+  <warning id="0x00082006" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="收到媒体的时间戳过大，可能原因是设备时钟未校准" relatedInfo="n/a"/>  
+  <warning id="0x00083001" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="open" description="SDI输出音视频不同步" pair_id="0x00083002" relatedInfo="n/a"/>  
+  <warning id="0x00083002" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="close" description="SDI输出音视频恢复同步" pair_id="0x00083001" relatedInfo="n/a"/>  
+  <warning id="0x00083003" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="open" description="SDI输出视频时间戳不连续" pair_id="0x00083004" relatedInfo="n/a"/>  
+  <warning id="0x00083004" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="close" description="SDI输出视频时间戳恢复" pair_id="0x00083003" relatedInfo="n/a"/>  
+  <warning id="0x00083005" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="open" description="SDI输出音频时间戳不连续" pair_id="0x00083006" relatedInfo="n/a"/>  
+  <warning id="0x00083006" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="close" description="SDI输出音频时间戳恢复" pair_id="0x00083005" relatedInfo="n/a"/>  
+  <warning id="0x00083008" level="notify" belong="live/core" type="TASK" category="ET_Output" pair="none" description="SDI输入丢帧" relatedInfo="n/a"/>  
+  <!-- libStreamSwitch.so -->  
+  <warning id="0x00084001" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="延时输出打开缓存文件失败" relatedInfo="n/a"/>  
+  <warning id="0x00084002" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="延时输出读取缓存文件错误" relatedInfo="n/a"/>  
+  <warning id="0x00084003" level="notify" belong="live/core" type="TASK" category="ET_Output" pair="none" description="延播开始" relatedInfo="n/a"/> 
+</warning_map>

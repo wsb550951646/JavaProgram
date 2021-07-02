@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<warning_map version="1.0" description="all warning infomation of arcvideo transcoder"> 
+  <!-- warning maps -->  
+  <!-- monitor[0x82001xxx] -->  
+  <!-- condition[format: >5 ]: ==, !=, <(&lt;), >(&gt;), <=, >=, -->  
+  <!-- pair self, notify close warning and alert-->  
+  <warning id="0x02001001" alias="net_rxuse_rate" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001001" description="Network traffic load is normal: interface=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001001" alias="net_rxuse_rate" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=90" pair="open" pair_id="0x02001001" description="Network traffic load is high: interface=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001001" alias="net_rxuse_rate" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=98" pair="open" pair_id="0x02001001" description="Network traffic load is full: interface=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001002" alias="net_speed" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&lt;9999999999" pair="close" pair_id="0x02001002" description="Network speed is normal: interface=#{alert.index}, speed=#{alert.value}" relatedInfo="n/a"/>  
+  <warning id="0x02001002" alias="net_speed" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&lt;1000" pair="open" pair_id="0x02001002" description="Network speed is low: interface=#{alert.index}, speed=#{alert.value}" relatedInfo="n/a"/>  
+  <warning id="0x02001003" alias="net_up" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="==2" pair="close" pair_id="0x82001004" description="Interface is up: interface=#{alert.index}" relatedInfo="n/a"/>  
+  <warning id="0x82001004" alias="net_down" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="==1" pair="open" pair_id="0x02001003" description="Interface is down: interface=#{alert.index}, Please check whether the network cable is connected, if the network card is not enabled, you can remove this alarm by the ignore button" relatedInfo="n/a"/>  
+  <warning id="0x02001005" alias="cpu_use_rate" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001005" description="CPU load is normal: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001005" alias="cpu_use_rate" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=90" pair="open" pair_id="0x02001005" description="CPU load is high: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001005" alias="cpu_use_rate" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=98" pair="open" pair_id="0x02001005" description="CPU load is full: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001006" alias="gpu_use_rate" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001006" description="GPU load is normal: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001006" alias="gpu_use_rate" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=90" pair="open" pair_id="0x02001006" description="GPU load is high: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001006" alias="gpu_use_rate" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=98" pair="open" pair_id="0x02001006" description="GPU load is full: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001007" alias="gpu_mem_use_rate" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001007" description="GPU memory usage is normal: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001007" alias="gpu_mem_use_rate" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=90" pair="open" pair_id="0x02001007" description="GPU memory usage is high: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001007" alias="gpu_mem_use_rate" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=98" pair="open" pair_id="0x02001007" description="GPU memory usage is full: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001008" alias="mem_use_rate" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001008" description="Memory usage is normal: current =#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001008" alias="mem_use_rate" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=90" pair="open" pair_id="0x02001008" description="Memory usage is high: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001008" alias="mem_use_rate" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=98" pair="open" pair_id="0x02001008" description="Memory usage is full: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001009" alias="disk_use_rate" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001009" description="Disk use normal: filesystem=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001009" alias="disk_use_rate" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=90" pair="open" pair_id="0x02001009" description="Disk use high: filesystem=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001009" alias="disk_use_rate" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=98" pair="open" pair_id="0x02001009" description="Disk use full: filesystem=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001010" alias="root_disk_use_rate" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001010" description="Root space is normal: filesystem=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001010" alias="root_disk_use_rate" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=90" pair="open" pair_id="0x02001010" description="Root space is high: filesystem=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001010" alias="root_disk_use_rate" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=98" pair="open" pair_id="0x02001010" description="Root space is full: filesystem=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001011" alias="usr_disk_use_rate" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001011" description="Root space is normal: filesystem=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001011" alias="usr_disk_use_rate" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=90" pair="open" pair_id="0x02001011" description="User space is high: filesystem=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001011" alias="usr_disk_use_rate" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=98" pair="open" pair_id="0x02001011" description="User space is full: filesystem=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001012" alias="cpu_temp" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001012" description="CPU temperature is normal: CPU=#{alert.index}, current=#{alert.value}℃" relatedInfo="n/a"/>  
+  <warning id="0x02001012" alias="cpu_temp" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=70" pair="open" pair_id="0x02001012" description="CPU temperature is high: CPU=#{alert.index}, current=#{alert.value}℃" relatedInfo="n/a"/>  
+  <warning id="0x02001012" alias="cpu_temp" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=90" pair="open" pair_id="0x02001012" description="CPU temperature is too high: CPU=#{alert.index}, current=#{alert.value}℃" relatedInfo="n/a"/>  
+  <warning id="0x02001013" alias="gpu_temp" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001013" description="GPU temperature is normal: GPU=#{alert.index}, current=#{alert.value}℃" relatedInfo="n/a"/>  
+  <warning id="0x02001013" alias="gpu_temp" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=70" pair="open" pair_id="0x02001013" description="GPU temperature is high: GPU=#{alert.index}, current=#{alert.value}℃" relatedInfo="n/a"/>  
+  <warning id="0x02001013" alias="gpu_temp" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=90" pair="open" pair_id="0x02001013" description="GPU temperature is too high: GPU=#{alert.index}, current=#{alert.value}℃" relatedInfo="n/a"/>  
+  <warning id="0x02001014" alias="fan_speed" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&lt;9999999999" pair="close" pair_id="0x02001014" description="Fan speed is normal: fan=#{alert.index}, speed=#{alert.value}" relatedInfo="n/a"/>  
+  <warning id="0x02001014" alias="fan_speed" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&lt;=100" pair="open" pair_id="0x02001014" description="Fan speed is slow: fan=#{alert.index}, speed=#{alert.value}" relatedInfo="n/a"/>  
+  <warning id="0x02001014" alias="fan_speed" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&lt;=1" pair="open" pair_id="0x02001014" description="Fan speed is zero: fan=#{alert.index}, speed=#{alert.value}" relatedInfo="n/a"/>  
+  <warning id="0x02001015" alias="power_alert" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001015" description="Power Supply is normal: #{alert.index}" relatedInfo="n/a"/>  
+  <warning id="0x02001015" alias="power_alert" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=1" pair="open" pair_id="0x02001015" description="Power Supply Failure Detected: #{alert.index}" relatedInfo="n/a"/>  
+  <warning id="0x02001016" alias="ssd_use_rate" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001016" description="SSD life is normal: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001016" alias="ssd_use_rate" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=90" pair="open" pair_id="0x02001016" description="SSD life is alarm: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001016" alias="ssd_use_rate" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=98" pair="open" pair_id="0x02001016" description="SSD life will be done: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001017" alias="net_txuse_rate" level="notify" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=0" pair="close" pair_id="0x02001017" description="write traffic load is normal: network port=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001017" alias="net_txuse_rate" level="warning" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=90" pair="open" pair_id="0x02001017" description="write traffic load is high: network port=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02001017" alias="net_txuse_rate" level="error" belong="live" type="HARDWARE" category="ET_Hardware" condition="&gt;=98" pair="open" pair_id="0x02001017" description="Write traffic load is full: network port=#{alert.index}, current=#{alert.value}%" relatedInfo="n/a"/>  
+  <!-- device[0x82002xxx] -->  
+  <warning id="0x02002001" alias="device_online" level="notify" belong="live" type="DEVICE" category="ET_Device" current="0" pair="close" pair_id="0x82002002" description="The device is connected" relatedInfo="n/a"/>  
+  <warning id="0x82002002" alias="device_offline" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" description="The device is disconnected" relatedInfo="n/a"/>  
+  <warning id="0x82002003" alias="device_no_backup" level="error" belong="live" type="DEVICE" category="ET_Device" current="0" pair="none" description="m+n[#{group_name}]: No backup server available" relatedInfo="n/a"/>  
+  <warning id="0x82002004" alias="device_take_over" level="error" belong="live" type="DEVICE" category="ET_Device" current="0" pair="none" description="m+n[#{group_name}]: Switch device[#{source_ip}] to device [#{new_server}]" relatedInfo="n/a"/>  
+  <warning id="0x82002005" alias="device_switch_role" level="error" belong="live" type="DEVICE" category="ET_Device" current="0" pair="none" description="1+1[#{group_name}]: Switch device[#{source_ip}] to [#{new_server}]" relatedInfo="n/a"/>  
+  <warning id="0x02002006" alias="device_recover" level="notify" belong="live" type="DEVICE" category="ET_Device" current="0" pair="close" pair_id="0x82002007;0x82002008;0x82002009;0x82002010;0x82002011;0x82002012;0x82002013;0x82002017;0x82002018;0x82002019" description="The device is restored" relatedInfo="n/a"/>  
+  <warning id="0x82002007" alias="device_no_license" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002006" description="The device does not have a license" relatedInfo="n/a"/>  
+  <warning id="0x82002008" alias="device_network_broken" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002006" description="Input or output network exception" relatedInfo="n/a"/>  
+  <warning id="0x82002009" alias="device_gpu_broken" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002006" description="At least one GPU does not work properly" relatedInfo="n/a"/>  
+  <warning id="0x82002010" alias="device_critical_error" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002006" description="The device is running in a critical state:#{offline_cause}" relatedInfo="n/a"/>  
+  <warning id="0x82002011" alias="device_sys_fault" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002006" description="The device system exception:#{offline_cause}" relatedInfo="n/a"/>  
+  <warning id="0x82002012" alias="device_authorization_expired" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002006" description="The device is unauthorized or authorization expires " relatedInfo="n/a"/>  
+  <warning id="0x82002013" alias="device_try_expired" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002006" description="The device trial period ends" relatedInfo="n/a"/>  
+  <warning id="0x02002014" alias="device_authorization_alert" level="warning" belong="live" type="DEVICE" category="ET_Device" current="0" pair="none" description="The device authorization will expire:#{alert_desc}" relatedInfo="n/a"/>  
+  <warning id="0x02002015" alias="device_try_alert" level="warning" belong="live" type="DEVICE" category="ET_Device" current="0" pair="none" description="The device trial period will expire:#{alert_desc}" relatedInfo="n/a"/>  
+  <warning id="0x82002016" alias="fault_monitor_failed" level="error" belong="live" type="DEVICE" category="ET_Device" pair="none" description="The fault detection service is not turned on" relatedInfo="n/a"/>  
+  <warning id="0x82002017" alias="fault_detected" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002006" description="Fault detection: server failure, unable to connect" relatedInfo="n/a"/>  
+  <warning id="0x82002018" alias="fault_reboot_failed" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002006" description="Fault detection: restart the device[#{source_ip}] fail:[#{error_code}]" relatedInfo="n/a"/>  
+  <warning id="0x82002019" alias="fault_switch_failed" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002006" description="Fault Detection: set the switch port[#{source_ip}] fail:[#{error_code}]" relatedInfo="n/a"/>  
+  <warning id="0x82002020" alias="device_version_different" level="warning" belong="live" type="DEVICE" category="ET_Device" pair="none" description="The device version is inconsistent:[#{alert_desc}]" relatedInfo="n/a"/>  
+  <warning id="0x82002021" alias="device_mount_smb_failed" level="error" belong="live" type="DEVICE" category="ET_Device" pair="none" description="The device mount remote storage failed:[#{smb_uri}]]" relatedInfo="n/a"/>  
+  <warning id="0x02002022" alias="dts_license_trial" level="warning" belong="live" type="DEVICE" category="ET_Device" pair="none" current="0" description="DTS license is trial" relatedInfo="n/a"/>  
+  <warning id="0x02002023" alias="device_slave_nonexistent" level="warning" belong="live" type="DEVICE" category="ET_Device" pair="none" current="0" description="There is no slave server in 1+1 group" relatedInfo="n/a"/>  
+  <warning id="0x82002030" alias="device_take_over_dual" level="error" belong="live" type="DEVICE" category="ET_Device" current="0" pair="none" description="1+1*group[#{group_name}]: Server[#{source_ip}]switch to[#{new_server}]" relatedInfo="n/a"/>  
+  <warning id="0x82002031" alias="device_no_backup_dual" level="error" belong="live" type="DEVICE" category="ET_Device" current="0" pair="none" description="1+1*group[#{group_name}]: No alternate server available" relatedInfo="n/a"/>  
+  <!-- storage -->  
+  <warning id="0x82002051" alias="storage_state_not_mount" level="warning" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002052" description="Remote storage can not mount：[#{alert_desc}]]" relatedInfo="n/a"/>  
+  <warning id="0x02002052" alias="storage_state_mount_success" level="notify" belong="live" type="DEVICE" category="ET_Device" pair="close" pair_id="0x82002051;0x82002053" current="0" description="Remote storage mount successfully：[#{alert_desc}]]" relatedInfo="n/a"/>  
+  <warning id="0x82002053" alias="storage_state_mount_failed" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002023" description="Remote storage mount failed：[#{alert_desc}]]" relatedInfo="n/a"/>  
+  <warning id="0x02002054" alias="storage_state_unmount_success" level="notify" belong="live" type="DEVICE" category="ET_Device" pair="close" pair_id="0x82002055" current="0" description="Remote storage unmount successfully：[#{alert_desc}]]" relatedInfo="n/a"/>  
+  <warning id="0x82002055" alias="storage_state_unmount_failed" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x02002054" description="Remote storage unmount failed：[#{alert_desc}]]" relatedInfo="n/a"/>  
+  <!-- danghongyun[0x8200203*] -->  
+  <warning id="0x82002091" alias="dhy_regiter_success" level="notify" belong="live" type="DEVICE" category="ET_Device" pair="close" pair_id="0x82002092" current="0" description="DangHongCloud regist: [#{alert_desc}]]" relatedInfo="n/a"/>  
+  <warning id="0x82002092" alias="dhy_regiter_failed" level="error" belong="live" type="DEVICE" category="ET_Device" pair="open" pair_id="0x82002091" description="DangHongCloud regist: [#{alert_desc}]]" relatedInfo="n/a"/>  
+  <!-- deploy[0x82003xxx] -->  
+  <warning id="0x02003001" alias="deploy_success" level="notify" belong="live" type="DEPLOY" category="ET_Deploy" pair="close" pair_id="0x82003002" description="Device[#{source_ip}] delopy successfully" relatedInfo="n/a"/>  
+  <warning id="0x82003002" alias="deploy_error" level="error" belong="live" type="DEPLOY" category="ET_Deploy" pair="open" pair_id="0x02003001" description="Device[#{source_ip}] delopy failed:[#{alert_desc}]" relatedInfo="n/a"/>  
+  <!-- system[0x82004xxx] -->  
+  <warning id="0x02004001" alias="socket_wait_num" level="notify" belong="live" type="SYSTEM" category="ET_System" condition="&gt;=0" pair="close" pair_id="0x02004001" description="The number of sockets that waiting to close is normal: current =#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02004001" alias="socket_wait_num" level="warning" belong="live" type="SYSTEM" category="ET_System" condition="&gt;=1000" pair="open" pair_id="0x02004001" description="The number of sockets that waiting to close is excessive: current =#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x02004001" alias="socket_wait_num" level="error" belong="live" type="SYSTEM" category="ET_System" condition="&gt;=10000" pair="open" pair_id="0x02004001" description="The number of sockets that waiting to close is abnormal: current=#{alert.value}%" relatedInfo="n/a"/>  
+  <warning id="0x82004002" alias="sys_fault_alert" level="error" belong="live" type="SYSTEM" category="ET_System" description="系统故障检测:[#{alert_desc}]" relatedInfo="n/a"/>  
+  <!-- web[0x82000xxx] -->  
+  <warning id="0x02000001" alias="task_auto_restart" level="warning" belong="live" type="TASK" category="ET_Internal" current="0" pair="none" description="The task is automatically restarted 1" relatedInfo="n/a"/>  
+  <warning id="0x02000011" alias="task_server_change" level="notify" belong="live" type="TASK" category="ET_Internal" current="0" pair="none" description="The task switchs to this device." relatedInfo="n/a"/>  
+  <warning id="0x02000012" alias="task_server_change" level="warning" belong="live" type="TASK" category="ET_Internal" current="0" pair="none" description="The task switchs to this device." relatedInfo="n/a"/>  
+  <warning id="0x82000002" alias="task_error" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Task execution failed" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x02000003" alias="task_warning" level="warning" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Task execution warning" enabled="0" needHandle="false" relatedInfo="n/a"/>  
+  <warning id="0x82000010" alias="task_sdioverip_used_port" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="SDIOverIP: Port is occupied" relatedInfo="n/a"/>  
+  <warning id="0x82000011" alias="task_sdioverip_used_ip" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="SDIOverIP: IP occupied" relatedInfo="n/a"/>  
+  <warning id="0x82005001" alias="task_error" level="error" belong="live/core" type="TASK" category="ET_Internal" current="0" pair="none" description="YY task failed to start" relatedInfo="n/a"/>  
+  <warning id="0x82005002" alias="task_error" level="error" belong="live/core" type="TASK" category="ET_Internal" current="0" pair="none" description="YY account is already used" relatedInfo="n/a"/>  
+  <!-- web lib -->  
+  <warning id="0x81000301" alias="task_error_ftp_upload_file" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Upload file to FTP server failed" relatedInfo="n/a"/>  
+  <warning id="0x81000302" alias="task_error_ftp_connect" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Connect FTP server failed" relatedInfo="n/a"/>  
+  <warning id="0x81000303" alias="task_error_ftp_login" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Login FTP server failed" relatedInfo="n/a"/>  
+  <warning id="0x81000603" alias="task_write_file_failed" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Write file failed" relatedInfo="n/a"/>  
+  <warning id="0x81000507" alias="storage_lost" level="error" belong="live/core" type="HARDWARE" category="ET_Hardware" pair="none" description="Remote storage is disconnected: #{storage_name}" relatedInfo=""/>  
+  <warning id="0x81000508" alias="storage_abnormal" level="error" belong="live/core" type="HARDWARE" category="ET_Hardware" pair="none" description="Remote storage is inaccessible: #{storage_name}" relatedInfo=""/>  
+  <warning id="0x00061AE6" alias="task_write_file_failed" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Write file failed" relatedInfo="n/a"/>  
+  <warning id="0x01000201" alias="transcoder_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" description="Beyond the transcoding capacity of the device" relatedInfo="n/a"/>  
+  <warning id="0x01000202" alias="transcoder_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" description="Beyond the transcoding capacity of the device" relatedInfo="n/a"/>  
+  <warning id="0x01000203" alias="transcoder_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" description="Beyond the transcoding capacity of the device" relatedInfo="n/a"/>  
+  <warning id="0x01000204" alias="transcoder_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" description="Beyond the transcoding capacity of the device" relatedInfo="n/a"/>  
+  <warning id="0x01000205" alias="transcoder_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" description="Beyond the transcoding capacity of the device" relatedInfo="n/a"/>  
+  <warning id="0x01000206" alias="transcoder_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" description="Beyond the transcoding capacity of the device" relatedInfo="n/a"/>  
+  <warning id="0x01000301" alias="transcoder_waiting_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Beyond the waiting capacity of the device" condition="&gt;=3" relatedInfo="n/a"/>  
+  <warning id="0x81000003" alias="task_transcoder_exception" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" current="0" description="The transcoder exits abnormally" relatedInfo="n/a"/>  
+  <warning id="0x81000102" alias="outputgroup_count_exceeded" level="warning" belong="live/core" type="TASK" category="ET_Capability" pair="none" current="0" description="Beyond the transcoding capacity of the device" relatedInfo="n/a"/>  
+  <!-- transcoder -->  
+  <warning id="0x80090002" level="error" belong="live/core" type="TASK" category="ET_Setting" pair="none" description="The task XML syntax error" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090003" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="Resolved media information failed" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090004" level="error" belong="live/core" type="TASK" category="ET_Setting" pair="none" description="No transcoding is required for task settings" relatedInfo="n/a"/>  
+  <warning id="0x80090005" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Initialization transcoding graph failed" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090006" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Get the graph interface failed" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090007" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="Cannot find the parser of the input media " needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090008" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="Failed to open input file" relatedInfo="n/a"/>  
+  <warning id="0x80090009" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="The specified parser does not support input media" relatedInfo="n/a"/>  
+  <warning id="0x8009000A" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Failed to create the specified parser" relatedInfo="n/a"/>  
+  <warning id="0x8009000B" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Failed to create video decoder" relatedInfo="n/a"/>  
+  <warning id="0x8009000C" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="The video decoder does not support media format" relatedInfo="n/a"/>  
+  <warning id="0x8009000D" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Failed to initialize internal component" relatedInfo="n/a"/>  
+  <warning id="0x8009000E" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Failed to create video encoder" relatedInfo="n/a"/>  
+  <warning id="0x8009000F" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Failed to connect video encoder" relatedInfo="n/a"/>  
+  <warning id="0x80090010" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Initialization of the video encoder failed" relatedInfo="n/a"/>  
+  <warning id="0x80090011" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Initialization of the audio encoder failed" relatedInfo="n/a"/>  
+  <warning id="0x80090012" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="The audio decoder does not support media format" relatedInfo="n/a"/>  
+  <warning id="0x80090013" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Failed to create audio encoder" relatedInfo="n/a"/>  
+  <warning id="0x80090014" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Initialization of the audio decoder failed" relatedInfo="n/a"/>  
+  <warning id="0x80090015" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Failed to create multiplexer component" relatedInfo="n/a"/>  
+  <warning id="0x80090016" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Initialization of the multiplexer failed" relatedInfo="n/a"/>  
+  <warning id="0x80090017" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Failed to query graph control interface" relatedInfo="n/a"/>  
+  <warning id="0x80090018" level="error" belong="live/core" type="TASK" category="ET_Internal" pair="none" description="Failed to query graph search interface" relatedInfo="n/a"/>  
+  <warning id="0x80090019" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="Failed to enter file jump" relatedInfo="n/a"/>  
+  <warning id="0x8009001A" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Transcoding failed to start" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x8009001B" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Failed to create graph" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x8009001C" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Failed to create internal component" relatedInfo="n/a"/>  
+  <warning id="0x8009001D" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Failed to connect video decoder and backend components" relatedInfo="n/a"/>  
+  <warning id="0x8009001E" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Failed to connect audio decoder and backend components" relatedInfo="n/a"/>  
+  <warning id="0x8009001F" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Failed to connect PG decoder and backend components" relatedInfo="n/a"/>  
+  <warning id="0x80090020" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Failed to connect subtitle decoder and backend components" relatedInfo="n/a"/>  
+  <warning id="0x80090021" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="MV clip error" relatedInfo="n/a"/>  
+  <warning id="0x80090022" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Transcoding task hang" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090023" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Motion picture files does not exist" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090024" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Video encoder does not support the specified functions" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090025" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="transcode memory is seriously leaking" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090026" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="crop time exceeds file duration" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090027" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="set output path or parameter error" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090028" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Failed to load subtitle file" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80090200" level="error" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Transcoding program memory is heavily leak" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x0009010a" level="warning" belong="live" type="SOURCE" category="ET_Input" pair="close" pair_id="0x00090106;0x00090107" description="Padding recovered" relatedInfo="n/a"/>  
+  <warning id="0x00090109" level="warning" belong="core/live" type="TASK" category="ET_Internal" pair="none" enabled="0" description="Automatically switch to CPU encoding" relatedInfo="n/a"/>  
+  <warning id="0x00090101" level="warning" belong="core" type="SOURCE" category="ET_Input" pair="none" description="There is no video in the input file" relatedInfo="n/a"/>  
+  <warning id="0x00090102" level="warning" belong="core" type="SOURCE" category="ET_Input" pair="none" description="There is no audio in the input file" relatedInfo="n/a"/>  
+  <warning id="0x00090103" level="warning" belong="live" type="SOURCE" category="ET_Input" current="0" pair="none" description="The source switches to the main signal" relatedInfo="n/a"/>  
+  <warning id="0x00090104" level="warning" belong="live" type="SOURCE" category="ET_Input" current="0" pair="none" description="The source switches to the standby signal" relatedInfo="n/a"/>  
+  <warning id="0x00090105" level="warning" belong="live" type="SOURCE" category="ET_Input" current="0" pair="none" description="The source switches to the pad signal" relatedInfo="n/a"/>  
+  <warning id="0x00090106" level="warning" belong="live" type="SOURCE" category="ET_Input" pair="open" pair_id="0x0009010a" description="The padding file does not exist" relatedInfo="n/a"/>  
+  <warning id="0x00090107" level="warning" belong="live" type="SOURCE" category="ET_Input" pair="open" pair_id="0x0009010a" description="The padding file format is not supported" relatedInfo="n/a"/>  
+  <warning id="0x00090108" level="warning" belong="live" type="SOURCE" category="ET_Input" pair="none" description="Cuda initialization timeout" relatedInfo="n/a"/>  
+  <warning id="0x00090200" level="warning" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="Transcoding program memory leak" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x00099001" level="warning" belong="live" type="TASK" category="ET_Output" pair="open" pair_id="0x00099002" description="Connect (http/rtmp/mms) server failed" relatedInfo="n/a"/>  
+  <warning id="0x00099002" level="notify" belong="live" type="TASK" category="ET_Output" pair="close" pair_id="0x00099001" description="Connect(http/rtmp/mms) server successfully" relatedInfo="n/a"/>  
+  <warning id="0x00090026" level="warning" belong="core/live" type="TASK" category="ET_Internal" pair="none" description="crop time exceeds file duration" relatedInfo="n/a"/>  
+  <!-- http source -->  
+  <warning id="0x00010001" level="warning" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="Failed to connect the input URL" relatedInfo="url"/>  
+  <warning id="0x00010002" level="warning" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="Failed to read data" relatedInfo="url"/>  
+  <warning id="0x80010001" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="Failed to reconnect the input URL" relatedInfo="url"/>  
+  <warning id="0x80010002" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="Failed to read input source data" relatedInfo="url"/>  
+  <warning id="0x00010005" level="warning" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="HLS input slice read failed：#{filename}" relatedInfo="n/a"/>  
+  <!-- file source -->  
+  <warning id="0x00010010" level="warning" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="failed to read source file data" relatedInfo="n/a"/>  
+  <!-- libArcStreamSplitter-->  
+  <warning id="0x80011001" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="Failed to read data when composing slices" relatedInfo="url"/>  
+  <warning id="0x80011002" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="Slice data is incomplete" relatedInfo="n/a"/>  
+  <!-- ArcDemux -->  
+  <warning id="0x8002100A" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="The selected audio or video data is largely lost" relatedInfo=""/>  
+  <warning id="0x8002100B" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="Can not find the specified program" relatedInfo=""/>  
+  <warning id="0x0002100C" level="warning" belong="core/live" type="TASK" category="ET_Parse" pair="open" pair_id="0x00021018" description="The selected video data is lost a lot" relatedInfo=""/>  
+  <warning id="0x0002100D" level="warning" belong="core/live" type="TASK" category="ET_Parse" pair="open" pair_id="0x00021019" description="The selected audio data is lost a lot" relatedInfo=""/>  
+  <warning id="0x0002100E" level="warning" belong="live" type="TASK" category="ET_Performance" pair="open" pair_id="0x0002100F" description="The video queue is full, The performance of the encoder is insufficient or the input source has no video" needHandle="true" relatedInfo=""/>  
+  <warning id="0x0002100F" level="notify" belong="live" type="TASK" category="ET_Performance" pair="close" pair_id="0x0002100E" description="The video queue is restored" relatedInfo=""/>  
+  <warning id="0x00021010" level="warning" belong="live" type="TASK" category="ET_Performance" pair="open" pair_id="0x00021011" description="Full audio queue, poor encoder performance or input passive audio" relatedInfo=""/>  
+  <warning id="0x00021010" level="warning" belong="live" type="TASK" category="ET_Performance" pair="open" pair_id="0x00021011" description="Full audio queue, poor encoder performance or input passive audio" relatedInfo=""/>  
+  <warning id="0x00021011" level="notify" belong="live" type="TASK" category="ET_Performance" pair="close" pair_id="0x00021010" description="The audio queue is restored" relatedInfo=""/>  
+  <warning id="0x00021012" level="warning" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="Program ID has changed" relatedInfo=""/>  
+  <warning id="0x00021013" level="warning" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="PMT PID has changed" relatedInfo=""/>  
+  <warning id="0x00021014" level="notify" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="Video PID has changed" relatedInfo=""/>  
+  <warning id="0x00021015" level="notify" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="Audio PID has changed变" relatedInfo=""/>  
+  <warning id="0x00021016" level="notify" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="Video type has changed" relatedInfo=""/>  
+  <warning id="0x00021017" level="notify" belong="live" type="TASK" category="ET_Parse" current="0" pair="none" description="Audio type has changed" relatedInfo=""/>  
+  <warning id="0x00021018" level="notify" belong="core/live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002100C" description="The video stream is restored" relatedInfo=""/>  
+  <warning id="0x00021019" level="notify" belong="core/live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002100D" description="The audio stream is restored" relatedInfo=""/>  
+  <warning id="0x0002101A" level="warning" belong="core" type="TASK" category="ET_Parse" pair="open" pair_id="0x0002101B" description="The timestamps of the selected Audio and Video are too different" relatedInfo=""/>  
+  <warning id="0x0002101B" level="notify" belong="core" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002101A" description="The timestamps of the selected Audio and Video are consistent" relatedInfo=""/>  
+  <warning id="0x0002101C" level="notify" belong="core/live" type="TASK" category="ET_Parse" pair="open" pair_id="0x0002101D" description="PAT CRC32 an error occurred" relatedInfo=""/>  
+  <warning id="0x0002101D" level="notify" belong="core/live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002101C" description="PAT CRC32 recovery after an error occurs" relatedInfo=""/>  
+  <warning id="0x0002101E" level="notify" belong="core/live" type="TASK" category="ET_Parse" pair="open" pair_id="0x0002101F" description="PMT CRC32 an error occurred" relatedInfo=""/>  
+  <warning id="0x0002101F" level="notify" belong="core/live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002101E" description="PMT CRC32 recovery after an error occurs" relatedInfo=""/>  
+  <warning id="0x00021020" level="notify" belong="live" type="TASK" category="ET_Source" pair="open" pair_id="0x00021021" description="The source transmission rate is abnormal and uneven" relatedInfo=""/>  
+  <warning id="0x00021021" level="notify" belong="live" type="TASK" category="ET_Source" pair="close" pair_id="0x00021020" description="The normal transmission rate is restored after the source transmission rate is abnormal" relatedInfo=""/>  
+  <warning id="0x000210A0" level="notify" belong="live" type="SOURCE" category="ET_Source" pair="close" pair_id="0x000210A1;0x000210A2;0x000210A7;0x000210A8;0x000210AD;0x000210AE;0x000210B0;0x000210B1;0x000210B3;0x000210B3" description="The source is back to normal" relatedInfo=""/>  
+  <warning id="0x000210A1" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="The source is interrupted" relatedInfo=""/>  
+  <warning id="0x000210A2" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="The source continues to be interrupted" enabled="0" relatedInfo=""/>  
+  <warning id="0x000210A3" level="warning" belong="live" type="SOURCE" category="ET_Source" current="0" description="Source interrupt, to be switched" relatedInfo=""/>  
+  <warning id="0x000210A7" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Program ID lost" relatedInfo=""/>  
+  <warning id="0x000210A8" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Program ID continues to be lost" enabled="0" relatedInfo=""/>  
+  <warning id="0x000210A9" level="warning" belong="live" type="SOURCE" category="ET_Source" current="0" description="Program ID lost, to be switched" relatedInfo=""/>  
+  <warning id="0x000210AD" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Video lost" relatedInfo=""/>  
+  <warning id="0x000210AE" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Video continues to be lost" enabled="0" relatedInfo=""/>  
+  <warning id="0x000210AF" level="warning" belong="live" type="SOURCE" category="ET_Source" current="0" pair="none" description="Video lost, to be switched" relatedInfo=""/>  
+  <warning id="0x000210B0" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Audio lost" relatedInfo=""/>  
+  <warning id="0x000210B1" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Audio continues to be lost" enabled="0" relatedInfo=""/>  
+  <warning id="0x000210B2" level="warning" belong="live" type="SOURCE" category="ET_Source" current="0" pair="none" description="Audio lost, to be switched" relatedInfo=""/>  
+  <warning id="0x000210B3" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Continuous counter(CC) error" relatedInfo=""/>  
+  <warning id="0x000210B4" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000210A0" description="Continuous counter(CC) continues error" enabled="0" relatedInfo=""/>  
+  <warning id="0x000210B5" level="warning" belong="live" type="SOURCE" category="ET_Source" current="0" pair="none" description="Continuous counter(CC) error, to be switched" relatedInfo=""/>  
+  <warning id="0x000210FF" level="notify" belong="live" type="SOURCE" category="ET_Source" current="0" pair="none" description="Source switch" relatedInfo=""/>  
+  <warning id="0x00021EA0" level="notify" belong="live/core" type="SOURCE" category="ET_Source" pair="close" pair_id="0x00021EA1;0x00021EA2;0x00021EA7;0x00021EA8;0x00021EAD;0x00021EAE;0x00021EB0;0x00021EB1;0x00021EB3;0x00021EB3" description="The padding source is restored" relatedInfo="n/a"/>  
+  <warning id="0x00021FA0" level="notify" belong="live/core" type="SOURCE" category="ET_Source" pair="close" pair_id="0x00021FA1;0x00021FA2;0x00021FA7;0x00021FA8;0x00021FAD;0x00021FAE;0x00021FB0;0x00021FB1;0x00021FB3;0x00021FB3" description="The backup source is restored" relatedInfo="n/a"/>  
+  <warning id="0x00021EA1" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="The padding source is interrupted" relatedInfo="n/a"/>  
+  <warning id="0x00021FA1" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="The backup is interrupted" relatedInfo="n/a"/>  
+  <warning id="0x00021EA2" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="The padding source continues to be interrupted" relatedInfo="n/a"/>  
+  <warning id="0x00021FA2" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="The backup source continues to be interrupted" relatedInfo="n/a"/>  
+  <warning id="0x00021EA3" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="The padding source is interrupted, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021FA3" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="The backup source is interrupted, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021EA4" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="The PAT of padding source is lost" relatedInfo="n/a"/>  
+  <warning id="0x00021FA4" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="The PAT of backup source is lost" relatedInfo="n/a"/>  
+  <warning id="0x00021EA5" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="The PAT of padding source continues be lost" relatedInfo="n/a"/>  
+  <warning id="0x00021FA5" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="The PAT of backup source continues be lost" relatedInfo="n/a"/>  
+  <warning id="0x00021EA6" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="The PAT of padding source is lost, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021FA6" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="The PAT of backup source is lost, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021EA7" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="The Program ID of padding source is lost" relatedInfo="n/a"/>  
+  <warning id="0x00021FA7" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="The Program ID of backup source is lost" relatedInfo="n/a"/>  
+  <warning id="0x00021EA8" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="The Program ID of padding source continues be lost" relatedInfo="n/a"/>  
+  <warning id="0x00021FA8" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="The Program ID of backup source continues be lost" relatedInfo="n/a"/>  
+  <warning id="0x00021EA9" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="The Program ID of padding source is lost, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021FA9" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="The Program ID of backup source is lost, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021EAA" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="The PMT of padding source is lost" relatedInfo="n/a"/>  
+  <warning id="0x00021FAA" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="The PMT of backup source is lost" relatedInfo="n/a"/>  
+  <warning id="0x00021EAB" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="The PMT of padding source continues be lost" relatedInfo="n/a"/>  
+  <warning id="0x00021FAB" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="The PMT of backup source continues be lost" relatedInfo="n/a"/>  
+  <warning id="0x00021EAC" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="The PMT of padding source is lost, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021FAC" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="The PMT of backup source is lost, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021EAD" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="The video data of padding source is lost" relatedInfo="n/a"/>  
+  <warning id="0x00021FAD" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="The video data of backup source is lost" relatedInfo="n/a"/>  
+  <warning id="0x00021EAE" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="The video data of padding source continues be lost" relatedInfo="n/a"/>  
+  <warning id="0x00021FAE" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="The video data of backup source continues be lost" relatedInfo="n/a"/>  
+  <warning id="0x00021EAF" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="The video data of padding source is lost, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021FAF" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="The video data of backup source is lost, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021EB0" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="The audio data of padding source is lost" relatedInfo="n/a"/>  
+  <warning id="0x00021FB0" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="The audio data of backup source is lost" relatedInfo="n/a"/>  
+  <warning id="0x00021EB1" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="The audio data of padding source continues be lost" relatedInfo="n/a"/>  
+  <warning id="0x00021FB1" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="The audio data of backup source continues be lost" relatedInfo="n/a"/>  
+  <warning id="0x00021EB2" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="The audio data of padding source is lost, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021FB2" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="The audio data of backup source is lost, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021EB3" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021EA0" description="The CC of padding source is error" relatedInfo="n/a"/>  
+  <warning id="0x00021FB3" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00021FA0" description="The CC of backup source is error" relatedInfo="n/a"/>  
+  <warning id="0x00021EB4" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021EA0" description="The CC of padding source continues be error" relatedInfo="n/a"/>  
+  <warning id="0x00021FB4" level="warning" belong="live/core" type="SOURCE" category="ET_Source" enabled="0" pair="open" pair_id="0x00021FA0" description="The CC of backup source continues be error" relatedInfo="n/a"/>  
+  <warning id="0x00021EB5" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021EA0" description="The CC of padding source is error, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021FB5" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="open" pair_id="0x00021FA0" description="The CC of backup source is error, to be switched" relatedInfo="n/a"/>  
+  <warning id="0x00021E12" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="The padding Program ID has changed" relatedInfo="n/a"/>  
+  <warning id="0x00021F12" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="The backup Program ID has changed" relatedInfo="n/a"/>  
+  <warning id="0x00021E13" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="The padding PMT PID has changed" relatedInfo="n/a"/>  
+  <warning id="0x00021F13" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="The backup PMT PID has changed" relatedInfo="n/a"/>  
+  <warning id="0x00021E14" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="The padding Video PID has changed" relatedInfo="n/a"/>  
+  <warning id="0x00021F14" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="The backup Video PID has changed" relatedInfo="n/a"/>  
+  <warning id="0x00021E15" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="The padding Audio PID has changed" relatedInfo="n/a"/>  
+  <warning id="0x00021F15" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="The backup Audio PID has changed" relatedInfo="n/a"/>  
+  <warning id="0x00021E16" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="The padding Video type has changed" relatedInfo="n/a"/>  
+  <warning id="0x00021F16" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="The backup Video type has changed" relatedInfo="n/a"/>  
+  <warning id="0x00021E17" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="The padding Audio type has changed" relatedInfo="n/a"/>  
+  <warning id="0x00021F17" level="warning" belong="live/core" type="SOURCE" category="ET_Source" current="0" pair="none" description="The backup Audio type has changed" relatedInfo="n/a"/>  
+  <!-- MP4 splitter-->  
+  <warning id="0x80022006" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="Illegal MP4 input file" relatedInfo="n/a"/>  
+  <warning id="0x80022007" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="The input MP4 file parser does not support CMOV box" relatedInfo="n/a"/>  
+  <warning id="0x80022008" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="The input MP4 file parser does not support Fragment MP4" relatedInfo="n/a"/>  
+  <warning id="0x80022009" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file does not contain moov box" relatedInfo="n/a"/>  
+  <warning id="0x8002200A" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file does not contain mvhd box" relatedInfo="n/a"/>  
+  <warning id="0x8002200B" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file does not contain trak box" relatedInfo="n/a"/>  
+  <warning id="0x8002200C" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file does not contain tkhd box" relatedInfo="n/a"/>  
+  <warning id="0x8002200D" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file does not contain mdhd box" relatedInfo="n/a"/>  
+  <warning id="0x8002200E" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file does not contain stsd box" relatedInfo="n/a"/>  
+  <warning id="0x8002200F" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file does not contain stts box" relatedInfo="n/a"/>  
+  <warning id="0x80022010" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file does not contain stsz box" relatedInfo="n/a"/>  
+  <warning id="0x80022011" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file does not contain stsc box" relatedInfo="n/a"/>  
+  <warning id="0x80022012" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file does not contain stso/co64 box" relatedInfo="n/a"/>  
+  <warning id="0x80022013" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file contains the illegal stsd" relatedInfo="n/a"/>  
+  <warning id="0x80022014" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file contains the illegal stts" relatedInfo="n/a"/>  
+  <warning id="0x80022015" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file contains the illegal stsz" relatedInfo="n/a"/>  
+  <warning id="0x80022016" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file contains the illegal stsc" relatedInfo="n/a"/>  
+  <warning id="0x80022017" level="error" belong="core" type="SOURCE" category="ET_Input" pair="none" description="The input MP4 file contains the illegal stso/co64" relatedInfo="n/a"/>  
+  <warning id="0x80022018" level="error" belong="core" type="TASK" category="ET_Input" pair="none" description="Source file has a lot of data errors" relatedInfo="n/a"/>  
+  <warning id="0x00022018" level="warning" belong="core" type="TASK" category="ET_Input" pair="none" description="Source file has data error" relatedInfo="n/a"/>  
+  <warning id="0x80022019" level="error" belong="core" type="TASK" category="ET_Input" pair="none" description="The source file has a large number of timestamps that are not consecutive errors" relatedInfo="n/a"/>  
+  <warning id="0x00022019" level="warning" belong="core" type="TASK" category="ET_Input" pair="none" description="Source file has timestamp discontinuous error" relatedInfo="n/a"/>  
+  <!-- ASF splitter-->  
+  <warning id="0x80023006" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="Illegal input ASF file" relatedInfo="n/a"/>  
+  <warning id="0x80023007" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="The input ASF file does not contain EBML" relatedInfo="n/a"/>  
+  <warning id="0x80023008" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="The input ASF file does not contain EBML" relatedInfo="n/a"/>  
+  <warning id="0x80023009" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="The input ASF file does not contain track" relatedInfo="n/a"/>  
+  <!-- MXF splitter-->  
+  <warning id="0x80027008" level="error" belong="core" type="TASK" category="ET_Input" pair="none" description="There are a lot of data errors in the source file" relatedInfo="n/a"/>  
+  <warning id="0x80027009" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="Source file cannot be sliced" relatedInfo="n/a"/>  
+  <!-- ArcDemux for Analyzer 0x80028001 -->  
+  <!-- FLV splitter-->  
+  <warning id="0x80025006" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="Illegal FLV input - pieces" relatedInfo="n/a"/>  
+  <warning id="0x80025007" level="error" belong="live" type="TASK" category="ET_Parse" pair="none" description="Illegal FLV flow" relatedInfo="n/a"/>  
+  <warning id="0x80025008" level="error" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="Input file data is incorrect or missing" relatedInfo="n/a"/>  
+  <warning id="0x8002500A" level="error" belong="live" type="TASK" category="ET_Parse" pair="none" description="Input file/stream timestamp jump" relatedInfo="n/a"/>  
+  <warning id="0x0002500B" level="warning" belong="live" type="TASK" category="ET_Parse" pair="open" pair_id="0x0002500C" description="The video queue is full, the encoder performance is insufficient, or the input source has no video" relatedInfo="n/a"/>  
+  <warning id="0x0002500C" level="notify" belong="live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002500B" description="Video queue full recovery" relatedInfo="n/a"/>  
+  <warning id="0x0002500D" level="warning" belong="live" type="TASK" category="ET_Parse" pair="open" pair_id="0x0002500E" description="The audio queue is full, the encoder performance is insufficient, or the input source has no audio" relatedInfo="n/a"/>  
+  <warning id="0x0002500E" level="notify" belong="live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002500D" description="Audio queue full recovery" relatedInfo="n/a"/>  
+  <!-- Media splitter-->  
+  <warning id="0x80020000" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="Initialization error" relatedInfo="n/a"/>  
+  <warning id="0x80020002" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="Library failed to load" relatedInfo="n/a"/>  
+  <warning id="0x80020004" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="PTS error" relatedInfo="n/a"/>  
+  <warning id="0x80020005" level="error" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="IO error" relatedInfo="n/a"/>  
+  <warning id="0x80020006" level="error" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="Failed to open input address" relatedInfo="n/a"/>  
+  <warning id="0x80020007" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="Audio and video stream information error" relatedInfo="n/a"/>  
+  <warning id="0x80020008" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="No audio and video streaming" relatedInfo="n/a"/>  
+  <warning id="0x8002000B" level="warning" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="Unable to find matching video pid or unable to get channel information" relatedInfo="n/a"/>  
+  <warning id="0x8002000C" level="warning" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="Unable to find matching audio pid or unable to get channel information" relatedInfo="n/a"/>  
+  <warning id="0x8002000F" level="error" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="Read data in unit time hang" relatedInfo="n/a"/>  
+  <warning id="0x00020000" level="warning" belong="live" type="TASK" category="ET_Parse" pair="none" pair_id="0x0002500C" description="Initialization error" relatedInfo="n/a"/>  
+  <warning id="0x00020003" level="warning" belong="live" type="SOURCE" category="ET_Input" pair="none" description="Time out" relatedInfo="n/a"/>  
+  <warning id="0x00020004" level="warning" belong="live" type="TASK" category="ET_Parse" pair="none" description="PTS error" relatedInfo="n/a"/>  
+  <warning id="0x00020006" level="warning" belong="live" type="TASK" category="ET_Parse" pair="none" description="Failed to open input address" relatedInfo="n/a"/>  
+  <warning id="0x00020007" level="warning" belong="live" type="TASK" category="ET_Parse" pair="none" description="Audio and video stream information error" relatedInfo="n/a"/>  
+  <warning id="0x00020008" level="warning" belong="live" type="TASK" category="ET_Parse" pair="none" description="No audio and video streaming" relatedInfo="n/a"/>  
+  <warning id="0x00020009" level="warning" belong="live" type="SOURCE" category="ET_Input" pair="none" description="Start/continuous interruption" relatedInfo="n/a"/>  
+  <warning id="0x0002000A" level="warning" belong="core/live" type="TASK" category="ET_Parse" pair="none" description="Unable to receive data restart ffmpeg engineer," relatedInfo="n/a"/>  
+  <warning id="0x0002000D" level="warning" belong="live" type="TASK" category="ET_Parse" pair="open" pair_id="0x0002000E" description="Send queue full alarm" relatedInfo="n/a"/>  
+  <warning id="0x0002000E" level="warning" belong="live" type="TASK" category="ET_Parse" pair="close" pair_id="0x0002000D" description="Send queue alarm is released" relatedInfo="n/a"/>  
+  <!-- RTP splitter-->  
+  <warning id="0x00026011" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00026012" description="The Sequence Number of RTP video is discontinuous." relatedInfo=""/>  
+  <warning id="0x00026012" level="notify" belong="live" type="SOURCE" category="ET_Source" pair="close" pair_id="0x00026011" description="The Sequence Number of RTP video recovers to normal" relatedInfo=""/>  
+  <warning id="0x00026018" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00026019" description="The Sequence Number of RTP audio is discontinuous." relatedInfo=""/>  
+  <warning id="0x00026019" level="notify" belong="live" type="SOURCE" category="ET_Source" pair="close" pair_id="0x00026018" description="Audio RTP stream Sequence Number is not continuously restored" relatedInfo=""/>  
+  <warning id="0x0002601A" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x0002601B" description="RTP stream Sequence Number is not continuous" relatedInfo=""/>  
+  <warning id="0x0002601B" level="notify" belong="live" type="SOURCE" category="ET_Source" pair="close" pair_id="0x0002601A" description="RTP stream Sequence Number is not continuously restored" relatedInfo=""/>  
+  <warning id="0x000260A0" level="notify" belong="live" type="SOURCE" category="ET_Source" pair="close" pair_id="0x000260A1;0x000260A2;0x000260A3;0x000260AD;0x000260AE" description="The source is back to normal" relatedInfo=""/>  
+  <warning id="0x000260A1" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000260A0" description="The source is interrupted" relatedInfo=""/>  
+  <warning id="0x000260A2" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000260A0" description="The source continues to be interrupted" enabled="0" relatedInfo=""/>  
+  <warning id="0x000260A3" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000260A0" current="0" description="The source interrupt, to be switched" relatedInfo=""/>  
+  <warning id="0x000260AD" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000260A0" description="The Sequence Number of RTP video stream is discontinuous" relatedInfo=""/>  
+  <warning id="0x000260AE" level="warning" belong="live" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000260A0" description="The Sequence Number of RTP audio stream is discontinuous" relatedInfo=""/>  
+  <!-- MXF splitter-->  
+  <warning id="0x80027008" level="error" belong="core" type="TASK" category="ET_Input" pair="none" description="There are a lot of data errors in the source file" relatedInfo="n/a"/>  
+  <warning id="0x80027009" level="error" belong="core" type="TASK" category="ET_Parse" pair="none" description="Source file cannot be sliced" relatedInfo="n/a"/>  
+  <!-- ArcDemux for Analyzer 0x80028001 -->  
+  <!-- Subtitle Parser 0x80029XXX-->  
+  <warning id="0x80029001" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="Unsupported Teletext type" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x80029002" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="Unsupported DVB Subtitle type" needHandle="true" relatedInfo="n/a"/>  
+  <!-- TS Muxer -->  
+  <warning id="0x80071006" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The TS multiplexer does not support the output audio stream format" relatedInfo="n/a"/>  
+  <warning id="0x80071007" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The TS multiplexer does not support the output video stream format" relatedInfo="n/a"/>  
+  <warning id="0x80071008" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The TS multiplexer does not support the output of the subtitle stream format" relatedInfo="n/a"/>  
+  <warning id="0x80071009" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The TS multiplexer does not support the number of output audio streams" relatedInfo="n/a"/>  
+  <warning id="0x8007100A" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The TS multiplexer does not support the number of output video streams" relatedInfo="n/a"/>  
+  <warning id="0x8007100B" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The TS multiplexer does not support the number of output subtitle streams" relatedInfo="n/a"/>  
+  <warning id="0x8007100C" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="AV is not match" relatedInfo="n/a"/>  
+  <warning id="0x8007100D" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Invalid PID of output TS" relatedInfo="n/a"/>  
+  <warning id="0x8007100E" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Invalid multiplexing bit rate setting of output TS" relatedInfo="n/a"/>  
+  <warning id="0x8007100F" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The MPTS streams is not supported by TS multiplexers" relatedInfo="n/a"/>  
+  <warning id="0x80071010" level="error" belong="live/core" type="TASK" category="ET_Output" pair="open" pair_id="0x80071012" description="The audio stream of TS output multiplexer losts" relatedInfo="n/a"/>  
+  <warning id="0x80071011" level="error" belong="live/core" type="TASK" category="ET_Output" pair="open" pair_id="0x80071013" description="The video stream of TS output multiplexer losts" relatedInfo="n/a"/>  
+  <warning id="0x80071012" level="notify" belong="live/core" type="TASK" category="ET_Output" pair="close" pair_id="0x80071010" description="The audio stream of TS output multiplexer is restored" relatedInfo="n/a"/>  
+  <warning id="0x80071013" level="notify" belong="live/core" type="TASK" category="ET_Output" pair="close" pair_id="0x80071011" description="The video stream of TS output multiplexer is restored" relatedInfo="n/a"/>  
+  <warning id="0x80071014" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Audio and video bit rate settings conflict with total bit rate settings" relatedInfo="n/a"/>  
+  <warning id="0x80071016" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Failed to get DRM Key" relatedInfo="n/a"/>  
+  <!-- MP4 Muxer -->  
+  <warning id="0x80072001" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Failed to open file" relatedInfo="n/a"/>  
+  <warning id="0x80072005" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Failed to write file" relatedInfo="n/a"/>  
+  <warning id="0x80072006" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The MP4 multiplexer does not support output audio stream format" relatedInfo="n/a"/>  
+  <warning id="0x80072007" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The MP4 multiplexer does not support the output video stream format" relatedInfo="n/a"/>  
+  <warning id="0x80072008" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The MP4 multiplexer does not support the output of the subtitle stream format" relatedInfo="n/a"/>  
+  <warning id="0x80072009" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The MP4 multiplexer does not support the number of output audio streams" relatedInfo="n/a"/>  
+  <warning id="0x8007200A" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The MP4 multiplexer does not support the number of output video streams" relatedInfo="n/a"/>  
+  <warning id="0x8007200B" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The MP4 multiplexer does not support the number of output subtitle streams" relatedInfo="n/a"/>  
+  <warning id="0x0007200C" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The audio and video timestamps received by the MP4 multiplexer are too different." relatedInfo="n/a"/>  
+  <warning id="0x0007200D" level="notify" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The MP4 output transcoding ends, processing temporary file notification (1 time / sec), preventing misjudgment as hang, no web display" relatedInfo="n/a"/>  
+  <warning id="0x8007200E" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Audio stream file is abnormal, no stts found" relatedInfo="n/a"/>  
+  <warning id="0x8007200F" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Video stream file is abnormal, no stts found" relatedInfo="n/a"/>  
+  <warning id="0x80072010" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Failed to read the file" relatedInfo="n/a"/>  
+  <warning id="0x80072011" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Flush file failed" relatedInfo="n/a"/>  
+  <warning id="0x80072012" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Close file failed" relatedInfo="n/a"/>  
+  <!-- FLV Muxer -->  
+  <warning id="0x80073006" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The FLV multiplexer does not support the output audio stream format" relatedInfo="n/a"/>  
+  <warning id="0x80073007" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The FLV multiplexer does not support the output video stream format" relatedInfo="n/a"/>  
+  <warning id="0x80073008" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The FLV multiplexer does not support the output of the subtitle stream format" relatedInfo="n/a"/>  
+  <warning id="0x80073009" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The FLV multiplexer does not support the number of output audio streams" relatedInfo="n/a"/>  
+  <warning id="0x8007300A" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The FLV multiplexer does not support the number of output video streams" relatedInfo="n/a"/>  
+  <warning id="0x8007300B" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The FLV multiplexer does not support the number of output subtitle streams" relatedInfo="n/a"/>  
+  <warning id="0x00073006" level="warning" belong="live" type="TASK" category="ET_Output" pair="none" description="The FLV multiplexer does not support the output audio stream format" relatedInfo="n/a"/>  
+  <warning id="0x00073007" level="warning" belong="live" type="TASK" category="ET_Output" pair="none" description="The FLV multiplexer does not support the output video stream format" relatedInfo="n/a"/>  
+  <warning id="0x0007300C" level="warning" belong="live" type="TASK" category="ET_Output" pair="none" description="Failed to connect RTMP server" relatedInfo="n/a"/>  
+  <warning id="0x0007300D" level="warning" belong="live" type="TASK" category="ET_Output" pair="none" description="Sending to RTMP server is too slow to generate #{count} alarms within #{duration} ms" relatedInfo="n/a"/>  
+  <warning id="0x0007300E" level="warning" belong="live" type="TASK" category="ET_Output" pair="none" description="The sending buffer to RTMP is full, empty the buffer" relatedInfo="n/a"/>  
+  <warning id="0x0007300F" level="warning" belong="live" type="TASK" category="ET_Output" pair="none" description="The sending buffer to RTMP will be full，lost B frame" relatedInfo="n/a"/>  
+  <warning id="0x00073011" level="notify" belong="live/core" type="TASK" category="ET_Output" enabled="0" pair="none" description="End of transcoding, processing temporary file notification (1 time / sec), preventing misjudgment as hang, no web display" relatedInfo="n/a"/>  
+  <warning id="0x00073020" level="notify" belong="live" type="TASK" category="ET_Output" pair="close" pair_id="0x0007300D" description="Sending to RTMP server is restored" relatedInfo="n/a"/>  
+  <!-- AVI Muxer, dropped -->  
+  <warning id="0x80074006" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The AVI multiplexer does not support the output audio stream format" relatedInfo="n/a"/>  
+  <warning id="0x80074007" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The AVI multiplexer does not support the output video stream format" relatedInfo="n/a"/>  
+  <warning id="0x80074008" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The AVI multiplexer does not support the output of the subtitle stream format" relatedInfo="n/a"/>  
+  <warning id="0x80074009" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The AVI multiplexer does not support the number of output audio streams" relatedInfo="n/a"/>  
+  <warning id="0x8007400A" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The AVI multiplexer does not support the number of output video streams" relatedInfo="n/a"/>  
+  <warning id="0x8007400B" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The AVI multiplexer does not support the number of output subtitle streams" relatedInfo="n/a"/>  
+  <!-- MKV Muxer, dropped, replaced by MediaMuxer -->  
+  <warning id="0x80075006" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The MKV multiplexer does not support the output audio stream format" relatedInfo="n/a"/>  
+  <warning id="0x80075007" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The MKV multiplexer does not support the output video stream format" relatedInfo="n/a"/>  
+  <warning id="0x80075008" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The MKV multiplexer does not support the output of the subtitle stream format" relatedInfo="n/a"/>  
+  <warning id="0x80075009" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The MKV multiplexer does not support the number of output audio streams" relatedInfo="n/a"/>  
+  <warning id="0x8007500A" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The MKV multiplexer does not support the number of output video streams" relatedInfo="n/a"/>  
+  <warning id="0x8007500B" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The MKV multiplexer does not support the number of output subtitle streams" relatedInfo="n/a"/>  
+  <!-- PS Muxer, dropped, replaced by MediaMuxer -->  
+  <warning id="0x80076006" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The PS multiplexer does not support the output audio stream format" relatedInfo="n/a"/>  
+  <warning id="0x80076007" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The PS multiplexer does not support the output video stream format" relatedInfo="n/a"/>  
+  <warning id="0x80076008" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The PS multiplexer does not support the output of the subtitle stream format" relatedInfo="n/a"/>  
+  <warning id="0x80076009" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The PS multiplexer does not support the number of output audio streams" relatedInfo="n/a"/>  
+  <warning id="0x8007600A" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The PS multiplexer does not support the number of output video streams" relatedInfo="n/a"/>  
+  <warning id="0x8007600B" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The PS multiplexer does not support the number of output subtitle streams" relatedInfo="n/a"/>  
+  <!-- ASF Muxer -->  
+  <warning id="0x80077006" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The ASF multiplexer does not support the output audio stream format" relatedInfo="n/a"/>  
+  <warning id="0x80077007" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The ASF multiplexer does not support the output video stream format" relatedInfo="n/a"/>  
+  <warning id="0x80077008" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The ASF multiplexer does not support the output of the subtitle stream format" relatedInfo="n/a"/>  
+  <warning id="0x80077009" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The ASF multiplexer does not support the number of output audio streams" relatedInfo="n/a"/>  
+  <warning id="0x8007700A" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The ASF multiplexer does not support the number of output video streams" relatedInfo="n/a"/>  
+  <warning id="0x8007700B" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="The ASF multiplexer does not support the number of output subtitle streams" relatedInfo="n/a"/>  
+  <!-- MXF Muxer -->  
+  <warning id="0x80078001" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF multiplexer failed to create output file" relatedInfo="n/a"/>  
+  <warning id="0x80078005" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF multiplexer failed to write a file" relatedInfo="n/a"/>  
+  <warning id="0x8007800C" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The frame rate of the MXF multiplexer output is not supported" relatedInfo="n/a"/>  
+  <warning id="0x8007800D" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The audio sample rate of the MXF multiplexer output is not supported" relatedInfo="n/a"/>  
+  <warning id="0x0007800E" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The audio data input by the MXF multiplexer is abnormal" relatedInfo="n/a"/>  
+  <warning id="0x0007800F" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF multiplexer slice data size exceeds expected value" relatedInfo="n/a"/>  
+  <warning id="0x00078010" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF multiplexer slice data size does not reach the expected value" relatedInfo="n/a"/>  
+  <warning id="0x80078011" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF multiplexer Flush file failed" relatedInfo="n/a"/>  
+  <warning id="0x80078012" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MXF multiplexer Close file failed" relatedInfo="n/a"/>  
+  <warning id="0x00078013" level="warning" belong="core" type="TASK" category="ET_Output" pair="none" description="The duration of the Audio input by the MXF multiplexer is less than Video, and the silence is muted" relatedInfo="n/a"/>  
+  <!-- Media Muxer avi,ps,mkv,wav,ogg-->  
+  <warning id="0x80079005" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MediaMuxer write file failed" relatedInfo="n/a"/>  
+  <warning id="0x80079006" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MediaMuxer does not support the specified audio stream" relatedInfo="n/a"/>  
+  <warning id="0x80079007" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MediaMuxer does not support the specified video stream" relatedInfo="n/a"/>  
+  <warning id="0x80079008" level="error" belong="core" type="TASK" category="ET_Output" pair="none" description="MediaMuxer does not support the specified subtitle stream" relatedInfo="n/a"/>  
+  <!-- Dash Muxer-->  
+  <warning id="0x8007A001" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Failed to open output file" relatedInfo="n/a"/>  
+  <warning id="0x8007A005" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Write file failed" relatedInfo="n/a"/>  
+  <warning id="0x0007A00D" level="notify" belong="live/core" type="TASK" category="ET_Output" pair="none" description="MP4 output transcoding ends, processing temporary file notification (once per second), to prevent misjudgement as hang, do not display on the web" relatedInfo="n/a"/>  
+  <warning id="0x8007A00E" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Storage error, read file failure" relatedInfo="n/a"/>  
+  <warning id="0x8007A00F" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Storage error, Flush file failed" relatedInfo="n/a"/>  
+  <warning id="0x8007A010" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Storage error, Close file failed" relatedInfo="n/a"/>  
+  <warning id="0x8007A011" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Failed to get DRM Key" relatedInfo="n/a"/>  
+  <!-- MPD Creator-->  
+  <warning id="0x8007B001" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Failed to open output file" relatedInfo="n/a"/>  
+  <warning id="0x8007B005" level="error" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Failed to write file" relatedInfo="n/a"/>  
+  <!-- Dump_null_time-->  
+  <warning id="0x00080001" level="warning" belong="core/live" type="TASK" category="ET_Output" pair="open" description="Output is interrupted" pair_id="0x00080003" relatedInfo="n/a"/>  
+  <warning id="0x00080002" level="warning" belong="core/live" type="TASK" category="ET_Output" pair="open" description="Output is continuously interrupted" pair_id="0x00080003" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00080003" level="notify" belong="core/live" type="TASK" category="ET_Output" pair="close" description="Output is restored" pair_id="0x00080001;0x00080002" relatedInfo="n/a"/>  
+  <warning id="0x80080001" level="error" belong="core/live" type="TASK" category="ET_Output" pair="none" description="Output storage is full" relatedInfo="n/a"/>  
+  <warning id="0x80080002" level="error" belong="core/live" type="TASK" category="ET_Output" pair="none" description="Failed to open output file" relatedInfo="n/a"/>  
+  <warning id="0x80080003" level="error" belong="live" type="TASK" category="ET_Output" pair="none" description="Failed to open ASI device" relatedInfo="n/a"/>  
+  <warning id="0x80080004" level="error" belong="core/live" type="TASK" category="ET_Output" pair="none" description="The file name set is too long(&gt;1024)" relatedInfo="n/a"/>  
+  <warning id="0x8008000a" level="error" belong="core/live" type="TASK" category="ET_Output" pair="none" description="IPSend error" relatedInfo="n/a"/>  
+  <warning id="0x00080005" level="warning" belong="core/live" type="TASK" category="ET_Output" pair="none" description="Write file timeout." relatedInfo="n/a"/>  
+  <warning id="0x00080006" level="warning" belong="core/live" type="TASK" category="ET_Output" pair="none" description="Open the file timeout" relatedInfo="n/a"/>  
+  <warning id="0x0008000a" level="warning" belong="core/live" type="TASK" category="ET_Output" pair="open" description="ASI output delay is large" pair_id="0x0008000b" relatedInfo="n/a"/>  
+  <warning id="0x0008000b" level="warning" belong="core/live" type="TASK" category="ET_Output" pair="close" description="ASI output returns to normal" pair_id="0x0008000a" relatedInfo="n/a"/>  
+  <!-- ArcStreamDump-->  
+  <warning id="0x80081001" level="error" belong="core" type="STORAGE" category="ET_Output" pair="none" description="Cloud Transcode Output Slice Storage Server write failed" relatedInfo="n/a"/>  
+  <!-- Video Encoder -->  
+  <warning id="0x80050001" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Failed to initialize video encoder" relatedInfo="n/a"/>  
+  <warning id="0x80050002" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Failed to create the encoder kernel" relatedInfo="n/a"/>  
+  <warning id="0x80050003" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="The Input video parameters are not supported" relatedInfo="n/a"/>  
+  <warning id="0x80050004" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Failed to adjustment parameter" relatedInfo="n/a"/>  
+  <warning id="0x80050005" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Failed to query SRT interface" relatedInfo="n/a"/>  
+  <warning id="0x80050006" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Failed to set SRT parameter" relatedInfo="n/a"/>  
+  <warning id="0x80050007" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder failed to get input sample(cpu) buffer" relatedInfo="n/a"/>  
+  <warning id="0x80050008" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder failed to obtain the output sample" relatedInfo="n/a"/>  
+  <warning id="0x80050009" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder failed to get the output sample buffer" relatedInfo="n/a"/>  
+  <warning id="0x8005000A" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder failed to sent samples" relatedInfo="n/a"/>  
+  <warning id="0x8005000B" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Both the input and the output are field mode, do not support to changing  frame rate" relatedInfo="n/a"/>  
+  <warning id="0x8005000C" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Internal setting error" relatedInfo="n/a"/>  
+  <warning id="0x8005000D" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Internal setting error" relatedInfo="n/a"/>  
+  <warning id="0x80051000" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Failed to create preprocessor instance" relatedInfo="n/a"/>  
+  <warning id="0x80051001" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Failed to set the preprocessor parameter(usually load cuda kernel failed)" relatedInfo="n/a"/>  
+  <warning id="0x80051002" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Internal error, BegineData() failed" relatedInfo="n/a"/>  
+  <warning id="0x80051003" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="Logo file format is not supported, or decoding failed" relatedInfo="n/a"/>  
+  <warning id="0x80051004" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Internal error, create cuda context failed" relatedInfo="n/a"/>  
+  <warning id="0x80051005" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder data preprocessing failed" relatedInfo="n/a"/>  
+  <warning id="0x80051006" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder internal error: PreProc_CreateDevide failed" relatedInfo="n/a"/>  
+  <warning id="0x80051007" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder internal error: Preprocessing is not supported" relatedInfo="n/a"/>  
+  <warning id="0x80051008" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Video encoder internal error: The cuda function crashes" relatedInfo="n/a"/>  
+  <warning id="0x80051009" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder internal error: GPU memory is insufficient for Cuda" relatedInfo="n/a"/>  
+  <warning id="0x8005100A" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder preprocessing module initialization failed" relatedInfo="n/a"/>  
+  <warning id="0x8005100B" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder internal error: Repeat frame flags of multi-output are inconsistent" relatedInfo="n/a"/>  
+  <warning id="0x8005100C" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder internal error: The path of image grabing or file does not exist" relatedInfo="n/a"/>  
+  <warning id="0x80052000" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="The video encoder failed to load the kernel library" relatedInfo="n/a"/>  
+  <warning id="0x80052001" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="The video encoder failed to create the kernel" relatedInfo="n/a"/>  
+  <warning id="0x80052002" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder kernel setup failed" relatedInfo="n/a"/>  
+  <warning id="0x80052003" level="error" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="The video encoder kernel failed to get the export interface" relatedInfo="n/a"/>  
+  <warning id="0x80052004" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder format is not supported" relatedInfo="n/a"/>  
+  <warning id="0x80052005" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Encoding kernel setup failed" relatedInfo="n/a"/>  
+  <warning id="0x80052006" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="The encoding kernel failed to run" relatedInfo="n/a"/>  
+  <warning id="0x80052007" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Failed to send the data to video encoder kernel" relatedInfo="n/a"/>  
+  <warning id="0x80052008" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="The memory of encoder kernel is insufficient" relatedInfo="n/a"/>  
+  <warning id="0x80053000" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Cuda error: cuInt failed" relatedInfo="n/a"/>  
+  <warning id="0x80053001" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Cuda error: cuDeviceGetCount failed" relatedInfo="n/a"/>  
+  <warning id="0x80053002" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Failed to query the cuda device" relatedInfo="n/a"/>  
+  <warning id="0x80053003" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuDeviceGet return error" relatedInfo="n/a"/>  
+  <warning id="0x80053004" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuDeviceGetname return error" relatedInfo="n/a"/>  
+  <warning id="0x80053005" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuDeviceComputeCapability return error" relatedInfo="n/a"/>  
+  <warning id="0x80053006" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="cuda device ID is set incorrectly" relatedInfo="n/a"/>  
+  <warning id="0x80053007" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video card does not support hardware coding" relatedInfo="n/a"/>  
+  <warning id="0x80053008" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Failed to create cuda stream" relatedInfo="n/a"/>  
+  <warning id="0x80053009" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Failed to create cuda context" relatedInfo="n/a"/>  
+  <warning id="0x8005300A" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Gpu memory is insufficient" relatedInfo="n/a"/>  
+  <warning id="0x8005300B" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Memory is insufficient" relatedInfo="n/a"/>  
+  <warning id="0x8005300C" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="The cuda function returns an error" relatedInfo="n/a"/>  
+  <warning id="0x8005300D" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="The cuda function returns an error" relatedInfo="n/a"/>  
+  <warning id="0x8005300E" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="The cuda function returns an error" relatedInfo="n/a"/>  
+  <warning id="0x8005300F" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Encoding format is not supported" relatedInfo="n/a"/>  
+  <warning id="0x80053010" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Encoding format is not supported" relatedInfo="n/a"/>  
+  <warning id="0x80053011" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder is set incorrectly" relatedInfo="n/a"/>  
+  <warning id="0x80053012" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder does not support the profile" relatedInfo="n/a"/>  
+  <warning id="0x80053013" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder does not support the input format" relatedInfo="n/a"/>  
+  <warning id="0x80053014" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Internal error" relatedInfo="n/a"/>  
+  <warning id="0x80053015" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="The quality level is set incorrectly" relatedInfo="n/a"/>  
+  <warning id="0x80053016" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="The number of reference frames exceeds 4" relatedInfo="n/a"/>  
+  <warning id="0x80053020" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="cuda core hang" relatedInfo="n/a"/>  
+  <warning id="0x80053051" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053052" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053053" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053054" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053055" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053056" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053057" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053058" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Cuda encoder parameter error" relatedInfo="n/a"/>  
+  <warning id="0x80053059" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x8005305A" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda memory is exhausted" relatedInfo="n/a"/>  
+  <warning id="0x8005305B" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x8005305C" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x8005305D" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x8005305E" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder buffer is too small" relatedInfo="n/a"/>  
+  <warning id="0x8005305F" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder version error" relatedInfo="n/a"/>  
+  <warning id="0x80053060" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053061" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error Need More Input" relatedInfo="n/a"/>  
+  <warning id="0x80053062" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder busy" relatedInfo="n/a"/>  
+  <warning id="0x80053063" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053064" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" GPUError="TRUE" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053065" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053066" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053067" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053068" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x80053069" level="error" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Cuda encoder kernel error" relatedInfo="n/a"/>  
+  <warning id="0x00050015" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video hardware encoder internal error" relatedInfo="n/a"/>  
+  <warning id="0x00050001" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="The video encoder gets the subtitle sample buffer failed" relatedInfo="n/a"/>  
+  <warning id="0x00050002" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder push subtitle data failed" relatedInfo="n/a"/>  
+  <warning id="0x00050003" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Timestamp of data received by video encoder falls back" relatedInfo="n/a"/>  
+  <warning id="0x00050004" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="The video encoder has no output for a long time" relatedInfo="n/a"/>  
+  <warning id="0x00050005" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="The video encoder has no input for a long time" relatedInfo="n/a"/>  
+  <warning id="0x00050006" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Video encoder processing time is too long" relatedInfo="n/a"/>  
+  <warning id="0x00051001" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Failed to capture picture" relatedInfo="n/a"/>  
+  <warning id="0x00051002" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Failed to save the capture picture file" relatedInfo="n/a"/>  
+  <warning id="0x00051003" level="warning" belong="live/core" type="SOURCE" category="ET_Input" pair="none" description="Failed to open the icon or logo file, it does not exist" relatedInfo="n/a"/>  
+  <warning id="0x00051004" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="The icon or logo format is not supported" relatedInfo="n/a"/>  
+  <warning id="0x00051005" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Failed to decode the icon or logo file" relatedInfo="n/a"/>  
+  <warning id="0x00051006" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Failed to read the icon or logo file" relatedInfo="n/a"/>  
+  <warning id="0x00051007" level="notify" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="Graphic wrapping roll end" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00053000" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" current="0" pair="none" description="Hardware encoding of H264 does not support, automatically switch to the software encoding" relatedInfo="n/a"/>  
+  <warning id="0x00053001" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" current="0" pair="none" description="Please do not use default QualityLevel for the encoder quality level setting" relatedInfo="n/a"/>  
+  <warning id="0x00053002" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" current="0" pair="none" description="Encoder output buffer is too small, please do not use following source for the output resolution setting" relatedInfo="n/a"/>  
+  <warning id="0x00053003" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" current="0" pair="none" description="Encoder kernel parameter error, repeat the previous frame" relatedInfo="n/a"/>  
+  <warning id="0x80054100" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Failed to load Advantech H265 board API, driver installation error" relatedInfo="n/a"/>  
+  <warning id="0x80054101" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Encoding resources are not enough, beyond the Advantech H265 board capacity" relatedInfo="n/a"/>  
+  <warning id="0x80054102" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Advantech H265 card coding resources are not enough, the number of channels exceeds the board capacity" relatedInfo="n/a"/>  
+  <warning id="0x80054103" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Failed to reset Advantech H265 board" relatedInfo="n/a"/>  
+  <warning id="0x80054104" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Failed to initialize the device of Advantech H265 board" relatedInfo="n/a"/>  
+  <warning id="0x80054105" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Failed to start up the device of Advantech H265 board" relatedInfo="n/a"/>  
+  <warning id="0x80054106" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Failed to shut down the device of Advantech H265 board" relatedInfo="n/a"/>  
+  <warning id="0x80054107" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Failed to register callback function of Advantech H265 board" relatedInfo="n/a"/>  
+  <warning id="0x80054108" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Failed to set the transcoding resolution of Advantech H265 board, it's not supported" relatedInfo="n/a"/>  
+  <warning id="0x80054109" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Failed to set the GOP size of Advantech H265 board, it's not supported" relatedInfo="n/a"/>  
+  <warning id="0x8005410A" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Failed to set the B-frame size of Advantech H265 board, it's not supported" relatedInfo="n/a"/>  
+  <warning id="0x8005410B" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Failed to set the transcoding level of Advantech H265 board" relatedInfo="n/a"/>  
+  <warning id="0x80054200" level="error" belong="live/core" type="TASK" category="ET_YH265" pair="none" description="Internal error of Advantech H265 board" relatedInfo="n/a"/>  
+  <warning id="0x80057001" level="error" belong="live/core" type="TASK" category="ET_AVS2Enc" pair="none" description="Two-node encoding, connection failure from the node server control port, please check if avs2_socket_server has permission or whether to start" relatedInfo="n/a"/>  
+  <warning id="0x80057002" level="error" belong="live/core" type="TASK" category="ET_AVS2Enc" pair="none" description="Two-node encoding, connection to the slave encoder data port failed, please check if avs2_socket_encoder has run permissions, etc" relatedInfo="n/a"/>  
+  <warning id="0x80057003" level="error" belong="live/core" type="TASK" category="ET_AVS2Enc" pair="none" description="Two-node encoding, data transfer error with slave node" relatedInfo="n/a"/>  
+  <warning id="0x80057004" level="error" belong="live/core" type="TASK" category="ET_AVS2Enc" pair="none" description="The master node failed to create the AVS2 encoding kernel" relatedInfo="n/a"/>  
+  <warning id="0x00057005" level="warning" belong="live/core" type="TASK" category="ET_AVS2Enc" pair="none" description="The primary node is missing a valid avs2_license" relatedInfo="n/a"/>  
+  <warning id="0x00057006" level="warning" belong="live/core" type="TASK" category="ET_AVS2Enc" pair="none" description="Two-node encoding, missing valid avs2_license from the node" relatedInfo="n/a"/>  
+  <warning id="0x00056001" level="warning" belong="live/core" type="TASK" category="ET_VideoEncode" pair="none" description="GOP size setting is incorrect, encoder modifies GOP" relatedInfo="n/a"/>  
+  <!-- audio decoder -->  
+  <warning id="0x80048000" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="Failed to load the audio decoder kernel library" relatedInfo="n/a"/>  
+  <warning id="0x80048001" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="Failed to load the audio decoder library" relatedInfo="n/a"/>  
+  <warning id="0x80048002" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="Failed to load the AAC decode library" relatedInfo="n/a"/>  
+  <warning id="0x80048003" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="Failed to load the DDP decode library" relatedInfo="n/a"/>  
+  <warning id="0x80048004" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="Failed to load the TrueHD decode library" relatedInfo="n/a"/>  
+  <warning id="0x80048005" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="Failed to load the MPA decode library" relatedInfo="n/a"/>  
+  <warning id="0x80040001" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="Failed to create AVCODEC" relatedInfo="n/a"/>  
+  <warning id="0x80040002" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="Failed to setup AVCODEC" relatedInfo="n/a"/>  
+  <warning id="0x80040003" level="error" belong="live/core" type="TASK" category="ET_AudioDecode" pair="none" description="AAC decoder library error" relatedInfo="n/a"/>  
+  <!-- audio encoder -->  
+  <warning id="0x80068000" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to load the audio encoder kernel library" relatedInfo="n/a"/>  
+  <warning id="0x80068001" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to load the AACPLUS library" relatedInfo="n/a"/>  
+  <warning id="0x80068002" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to load the DDP library" relatedInfo="n/a"/>  
+  <warning id="0x80068003" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to load the Boost library" relatedInfo="n/a"/>  
+  <warning id="0x80068004" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to load the AudioEnc encoder library" relatedInfo="n/a"/>  
+  <warning id="0x80068005" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to load the MP2 encoder library" relatedInfo="n/a"/>  
+  <warning id="0x80068006" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to load the MP3 encoder library" relatedInfo="n/a"/>  
+  <warning id="0x80068007" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to load the WMA encoder library" relatedInfo="n/a"/>  
+  <warning id="0x80068008" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to load the AudioBalance library" relatedInfo="n/a"/>  
+  <warning id="0x80060001" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to load the AACPLUS encoder library" relatedInfo="n/a"/>  
+  <warning id="0x80060002" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to initialize AACPLUS encoder library" relatedInfo="n/a"/>  
+  <warning id="0x80060003" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to initialize AMR encoder library" relatedInfo="n/a"/>  
+  <warning id="0x80060004" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to initialize AMRWB encoder library" relatedInfo="n/a"/>  
+  <warning id="0x80060005" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to create DDP encoder library" relatedInfo="n/a"/>  
+  <warning id="0x80060006" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to initialize DDP encoder library" relatedInfo="n/a"/>  
+  <warning id="0x80060007" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to create AudioBoost" relatedInfo="n/a"/>  
+  <warning id="0x80060008" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to create AudioEnc" relatedInfo="n/a"/>  
+  <warning id="0x80060009" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to initialize AudioEnc" relatedInfo="n/a"/>  
+  <warning id="0x8006000A" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to create MP2 Audio encoder kernal" relatedInfo="n/a"/>  
+  <warning id="0x8006000B" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to initialize MP2 Audio encoder instance" relatedInfo="n/a"/>  
+  <warning id="0x8006000C" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to create MP3 encoder kernal" relatedInfo="n/a"/>  
+  <warning id="0x8006000D" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to initialize MP3 encoder kernal" relatedInfo="n/a"/>  
+  <warning id="0x8006000E" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to create WMA kernal" relatedInfo="n/a"/>  
+  <warning id="0x8006000F" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Failed to initialize WMA kernal" relatedInfo="n/a"/>  
+  <warning id="0x80060010" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="Invalid DTS License" relatedInfo="n/a"/>  
+  <warning id="0x80060011" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="DTS sample rate error" relatedInfo="n/a"/>  
+  <warning id="0x80060012" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="DTS bit rate error" relatedInfo="n/a"/>  
+  <warning id="0x80060013" level="error" belong="live/core" type="TASK" category="ET_AudioEncode" pair="none" description="DTS setting error" relatedInfo="n/a"/>  
+  <!-- libuploadtask.so -->  
+  <warning id="0x00085001" level="warning" belong="live/core" type="TASK" category="ET_httpUpload" pair="open" pair_id="0x00085101" description="Failed to connect HLS server" relatedInfo="n/a"/>  
+  <warning id="0x00085002" level="warning" belong="live/core" type="TASK" category="ET_httpUpload" pair="open" pair_id="0x00085102" description="Upload HLS file failed twice again" relatedInfo="n/a"/>  
+  <warning id="0x00085003" level="warning" belong="live/core" type="TASK" category="ET_httpUpload" pair="open" pair_id="0x00085102" description="Upload HLS slice timeout" relatedInfo="n/a"/>  
+  <warning id="0x00085004" level="warning" belong="live/core" type="TASK" category="ET_httpUpload" pair="open" pair_id="0x00085104" description="Delete the slice failed, please check whether network connection are normal or the published directory is existed" relatedInfo="n/a"/>  
+  <warning id="0x00085101" level="notify" belong="live/core" type="TASK" category="ET_httpUpload" pair="close" pair_id="0x00085001" description="HLS Server connection is stored" relatedInfo="n/a"/>  
+  <warning id="0x00085102" level="notify" belong="live/core" type="TASK" category="ET_httpUpload" pair="close" pair_id="0x00085002;0x00085003" description="Writing HLS slice is restored" relatedInfo="n/a"/>  
+  <warning id="0x00085104" level="notify" belong="live/core" type="TASK" category="ET_httpUpload" pair="close" pair_id="0x00085004" description="Deleting HLS slice is restored" relatedInfo="n/a"/>  
+  <!-- ASVID -->  
+  <warning id="0x80030001" level="error" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" description="Video decoder output is not connected" relatedInfo="n/a"/>  
+  <warning id="0x80030003" level="error" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" description="The video decoder output buffer is smaller than the image size" relatedInfo="n/a"/>  
+  <warning id="0x80030006" level="error" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" description="Video decoder configuration failed" relatedInfo="n/a"/>  
+  <warning id="0x80030007" level="error" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" description="Video decoder to decode consecutive lost frames" relatedInfo="n/a"/>  
+  <warning id="0x00030002" level="warning" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" current="0" description="Video decoder failed to accept Sample" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00030005" level="warning" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" current="0" description="Video decoder failed to get buffer" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00030006" level="warning" belong="live/core" type="TASK" category="ET_VideoDecode" pair="none" current="0" description="Video decoder configuration hardware failure to enable soft solution" enabled="0" relatedInfo="n/a"/>  
+  <!-- graphtransdump -->  
+  <warning id="0x00081001" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00081007" description="The source is interrupted(no video/audio)" relatedInfo="n/a"/>  
+  <warning id="0x00081002" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00081007" description="The source continues to be interrupted(no video/audio)" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00081003" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00081007" description="The source is abnormal(no video)" relatedInfo="n/a"/>  
+  <warning id="0x00081004" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00081007" description="The source continues to be abnormal(no video)" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00081005" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00081007" description="The source is abnormal(no audio)" relatedInfo="n/a"/>  
+  <warning id="0x00081006" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00081007" description="The source continues to be abnormal(no audio)" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x00081007" level="notify" belong="live/core" type="SOURCE" category="ET_Source" pair="close" pair_id="0x00081001;0x00081002;0x00081003;0x00081004;0x00081005;0x00081006" description="The source is stored" relatedInfo="n/a"/>  
+  <warning id="0x0008100a" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="output delay" enabled="0" relatedInfo="n/a"/>  
+  <!-- SDI splitter -->  
+  <warning id="0x800F0001" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="SDI splitter allocates memory failed" relatedInfo="n/a"/>  
+  <warning id="0x800F0002" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="SDI card engine error, device has been occupied(E_SDI_ENGINE_FILE_ERROR)" relatedInfo="n/a"/>  
+  <warning id="0x800F0003" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="SDI card engine error, device has been occupied(E_SDI_ENGINE_INIT_ERROR)" relatedInfo="n/a"/>  
+  <warning id="0x800F0004" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="SDI card engine error(E_SDI_AUDIO_FILLBUFFER)" relatedInfo="n/a"/>  
+  <warning id="0x800F0005" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="SDI card engine error(E_SDI_VIDEO_FILLBUFFER)" relatedInfo="n/a"/>  
+  <warning id="0x800F0006" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="Failed to open SDI device(no card/no drive/device has been occupied, etc.)" relatedInfo="n/a"/>  
+  <warning id="0x800F0007" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="Failed to initialize of SDI device(no source/data error, etc.)" relatedInfo="n/a"/>  
+  <warning id="0x000F0010" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F0016" description="SDI source is interrupted" relatedInfo="n/a"/>  
+  <warning id="0x000F0011" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F0016" description="SDI source continues to be interrupted" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x000F0012" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F0016" description="SDI video data is lost" relatedInfo="n/a"/>  
+  <warning id="0x000F0013" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F0016" description="SDI video data continues to be lost" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x000F0014" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F0016" description="SDI audio data is lost" relatedInfo="n/a"/>  
+  <warning id="0x000F0015" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F0016" description="SDI audio data continues to be lost" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x000F0016" level="notify" belong="live/core" type="SOURCE" category="ET_Source" pair="close" pair_id="0x000F0010;0x000F0011;0x000F0012;0x000F0013;0x000F0014;0x000F0015" description="SDI source is stored" relatedInfo="n/a"/>  
+  <warning id="0x000F0021" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="The source is interrupted(to be swtiched)" relatedInfo="n/a"/>  
+  <warning id="0x000F0022" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="The video data is losted(to be swtiched)" relatedInfo="n/a"/>  
+  <warning id="0x000F0023" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="The audio data is losted(to be swtiched)" relatedInfo="n/a"/>  
+  <warning id="0x800F8030" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="The backup source has been set" relatedInfo="n/a"/>  
+  <warning id="0x800F8031" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="The main and backup source ports are the same" relatedInfo="n/a"/>  
+  <warning id="0x800F8032" level="error" belong="live/core" type="SOURCE" category="ET_Source" pair="none" description="The main source and backup source format are different" relatedInfo="n/a"/>  
+  <warning id="0x000F8010" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F8016" description="The backup source is interrupted" relatedInfo="n/a"/>  
+  <warning id="0x000F8011" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F8016" description="The backup source continues to be interrupted" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x000F8012" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F8016" description="The video data of backup source is lost" relatedInfo="n/a"/>  
+  <warning id="0x000F8013" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F8016" description="The video data of backup source continues be lost" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x000F8014" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F8016" description="The audio data of backup source is lost" relatedInfo="n/a"/>  
+  <warning id="0x000F8015" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x000F8016" description="The audio data of backup source continues be lost" enabled="0" relatedInfo="n/a"/>  
+  <warning id="0x000F8016" level="notify" belong="live/core" type="SOURCE" category="ET_Source" pair="close" pair_id="0x000F8010;0x000F8011;0x000F8012;0x000F8013;0x000F8014;0x000F8015" description="The backup source is stored" relatedInfo="n/a"/>  
+  <warning id="0x000F8021" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="he backup source is interrupted(to be swtiched)" relatedInfo="n/a"/>  
+  <warning id="0x000F8022" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="The video data of backup source is lost(to be swtiched)" relatedInfo="n/a"/>  
+  <warning id="0x000F8023" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="The audio data of backup source is lost(to be swtiched)" relatedInfo="n/a"/>  
+  <warning id="0x00083110" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="open" pair_id="0x00083111" description="#{sdi}source interruption，the port number is#{port}" relatedInfo="n/a"/>  
+  <warning id="0x00083111" level="notify" belong="live/core" type="SOURCE" category="ET_Source" pair="close" pair_id="0x00083110" description="#{sdi}source recovery，the port number is#{port}" relatedInfo="n/a"/>  
+  <warning id="0x000F0100" level="warning" belong="live" type="TASK" category="ET_Performance" pair="open" pair_id="0x000F0102" description="SDI video queue full, the encoder performance is insufficient or input source without video" needHandle="true" relatedInfo=""/>  
+  <warning id="0x000F0102" level="notify" belong="live" type="TASK" category="ET_Performance" pair="close" pair_id="0x000F0100" description="SDI video queue is restored" relatedInfo=""/>  
+  <warning id="0x000F0101" level="warning" belong="live" type="TASK" category="ET_Performance" pair="open" pair_id="0x000F0103" description="SDI audio queue full, the encoder performance is insufficient or input source without audio" relatedInfo=""/>  
+  <warning id="0x000F0103" level="notify" belong="live" type="TASK" category="ET_Performance" pair="close" pair_id="0x000F0101" description="SDI audio queue is restored" relatedInfo=""/>  
+  <warning id="0x000F0104" level="notify" belong="live" type="TASK" category="ET_Performance" description="SDI video still frame" relatedInfo=""/>  
+  <warning id="0x000F0200" level="warning" belong="live/core" type="SOURCE" category="ET_Source" pair="none" current="0" description="SDI source video has changed" relatedInfo="n/a"/>  
+  <!-- BD source filter -->  
+  <warning id="0x800A8000" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD enter unknown error" relatedInfo="n/a"/>  
+  <warning id="0x800A8001" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD enter the selected source without decryption" relatedInfo="n/a"/>  
+  <warning id="0x800A8002" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD input read file error" relatedInfo="n/a"/>  
+  <warning id="0x800A8003" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD input initialization failed" relatedInfo="n/a"/>  
+  <warning id="0x800A8004" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD input not found playlist" relatedInfo="n/a"/>  
+  <warning id="0x800A8005" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD input failed to initialize playlist" relatedInfo="n/a"/>  
+  <warning id="0x800A8006" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD input failed to take buffer" relatedInfo="n/a"/>  
+  <warning id="0x800A8007" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="BD input selected playlist can not be seek" relatedInfo="n/a"/>  
+  <!-- ASDvdVideoSource -->  
+  <warning id="0x800B8000" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD input unknown error" relatedInfo="n/a"/>  
+  <warning id="0x800B8001" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD input initialization failed" relatedInfo="n/a"/>  
+  <warning id="0x800B8002" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD input failed to load content" relatedInfo="n/a"/>  
+  <warning id="0x800B8003" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD input failed to read file" relatedInfo="n/a"/>  
+  <warning id="0x800B8004" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD input initialization title failed" relatedInfo="n/a"/>  
+  <warning id="0x800B8005" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD input did not find title" relatedInfo="n/a"/>  
+  <warning id="0x800B8007" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD input failed to fetch buffer" relatedInfo="n/a"/>  
+  <warning id="0x800B8008" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD input selected title can not seek" relatedInfo="n/a"/>  
+  <warning id="0x800B8009" level="error" belong="core" type="SOURCE" category="ET_Source" pair="none" description="DVD input search title error" relatedInfo="n/a"/>  
+  <!-- libhlscreate.so-->  
+  <warning id="0x80091001" level="error" belong="live/core" type="TASK" category="ET_hlscreate" pair="none" description="Failed to open m3u8 file" relatedInfo="n/a"/>  
+  <warning id="0x00091002" level="warning" belong="live/core" type="TASK" category="ET_hlscreate" pair="open" pair_id="0x00091003" description="Failed to open m3u8 file" relatedInfo="n/a"/>  
+  <warning id="0x00091003" level="warning" belong="live/core" type="TASK" category="ET_hlscreate" pair="close" pair_id="0x00091002" description="M3u8 file open failed to recover" relatedInfo="n/a"/>  
+  <!-- libSDIDump.so -->  
+  <warning id="0x00082001" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="open" description="The video output is not timely, probably because the input data network delay is large, or the clock of the transcoding device on site is slower than the current transcoding device" pair_id="0x00082002" enable="0" relatedInfo="n/a"/>  
+  <warning id="0x00082002" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="close" description="The video output is stored" pair_id="0x00082001" relatedInfo="n/a"/>  
+  <warning id="0x00082003" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="open" description="The audio output is not timely, probably because the input data network delay is large, or the clock of the transcoding device on site is slower than the current transcoding device" pair_id="0x00082004" enable="0" relatedInfo="n/a"/>  
+  <warning id="0x00082004" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="close" description="The audio output is stored" pair_id="0x00082003" relatedInfo="n/a"/>  
+  <warning id="0x00082005" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="The output is not serious, the possible reason is that the input data corresponding to the transcoding task does not open the synchronous mode, or the clock of the transcoding device on site is much slower than the current transcoding device" relatedInfo="n/a"/>  
+  <warning id="0x00082006" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Received media timestamp is too large, probably because the clock of the transcoding device on site is faster than the current transcoding device" relatedInfo="n/a"/>  
+  <warning id="0x00083001" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="open" description="SDI output audio and video are not synchronized" pair_id="0x00083002" relatedInfo="n/a"/>  
+  <warning id="0x00083002" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="close" description="SDI output audio and video synchronization recovery" pair_id="0x00083001" relatedInfo="n/a"/>  
+  <warning id="0x00083003" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="open" description="SDI output video timestamp is not continuous" pair_id="0x00083004" relatedInfo="n/a"/>  
+  <warning id="0x00083004" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="close" description="SDI output video timestamp recovery" pair_id="0x00083003" relatedInfo="n/a"/>  
+  <warning id="0x00083005" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="open" description="SDI output audio timestamp is not continuous" pair_id="0x00083006" relatedInfo="n/a"/>  
+  <warning id="0x00083006" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="close" description="SDI output audio timestamp recovery" pair_id="0x00083005" relatedInfo="n/a"/>  
+  <warning id="0x00083008" level="notify" belong="live/core" type="TASK" category="ET_Output" pair="none" description="SDI input frame loss" relatedInfo="n/a"/>  
+  <!-- libStreamSwitch.so -->  
+  <warning id="0x00084001" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Delayed output failed to open cache file" relatedInfo="n/a"/>  
+  <warning id="0x00084002" level="warning" belong="live/core" type="TASK" category="ET_Output" pair="none" description="Delayed output read cache file error" relatedInfo="n/a"/>  
+  <warning id="0x00084003" level="notify" belong="live/core" type="TASK" category="ET_Output" current="0" pair="none" description="Start of the broadcast" relatedInfo="n/a"/> 
+</warning_map>

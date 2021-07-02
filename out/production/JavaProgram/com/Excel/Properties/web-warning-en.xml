@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<warning_map version="1.0" description="all warning infomation of arcvideo cloud transcoder"> 
+  <!-- transcoder -->  
+  <warning id="0x81000001" level="error" belong="live/core" category="ET_Internal" pair="none" description="The duration of task start is to long 1" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x81000002" level="error" belong="live/core" category="ET_Internal" pair="none" description="Application expiration" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x81000003" level="error" belong="live/core" category="ET_Internal" pair="none" description="Transcoding task abnormal exit" relatedInfo="n/a"/>  
+  <!-- license -->  
+  <warning id="0x81000101" level="error" belong="live/core" category="ET_License" pair="none" description="The number of transcoding exceeds the license" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x81000102" level="error" belong="live/core" category="ET_License" pair="none" description="Task output exceeds license" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x81000103" level="error" belong="live/core" category="ET_License" pair="none" description="The number of HD tasks exceeds license" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x81000104" level="error" belong="core" category="ET_License" pair="none" description="The number of SD tasks exceeds license" relatedInfo="n/a"/>  
+  <warning id="0x81000105" level="error" belong="core" category="ET_License" pair="none" description="DTS authorization has expired. If you need to continue using DTS, please contact Danghong Technologies 0571-87767690." relatedInfo="n/a"/>  
+  <!--  FTP -->  
+  <warning id="0x81000301" level="error" belong="live/core" category="ET_Ftp" pair="none" description="FTP upload failed" relatedInfo="n/a"/>  
+  <warning id="0x81000302" level="error" belong="live/core" category="ET_Ftp" pair="none" description="FTP connection failed" relatedInfo="n/a"/>  
+  <warning id="0x81000303" level="error" belong="live/core" category="ET_Ftp" pair="none" description="FTP login failure" relatedInfo="n/a"/>  
+  <warning id="0x81000304" level="error" belong="live/core" category="ET_Ftp" pair="none" description="FTP address error" relatedInfo="n/a"/>  
+  <!-- Other -->  
+  <warning id="0x81000601" level="error" belong="live/core" category="ET_Internal" pair="none" description="fail to open file" relatedInfo="n/a"/>  
+  <warning id="0x81000602" level="error" belong="live/core" category="ET_Internal" pair="none" description="fail to read file" relatedInfo="n/a"/>  
+  <warning id="0x81000603" level="error" belong="live/core" category="ET_Internal" pair="none" description="fail to write to file" relatedInfo="n/a"/>  
+  <warning id="0x8100060B" level="error" belong="live/core" category="ET_Internal" pair="none" description="Unable to start transcoder.exe" relatedInfo="n/a"/>  
+  <!-- cloud -->  
+  <warning id="0x83000001" level="error" belong="core" category="ET_CloudSetting" pair="none" description="No transcoding device found" relatedInfo="n/a"/>  
+  <warning id="0x83000002" level="error" belong="core" category="ET_CloudSetting" pair="none" description="Mission failure" relatedInfo="n/a"/>  
+  <warning id="0x83000003" level="error" belong="core" category="ET_CloudSetting" pair="none" description="Undefined Transcoding Temporary File Path" relatedInfo="n/a"/>  
+  <warning id="0x83000004" level="error" belong="core" category="ET_Internal" pair="none" description="Download failure" relatedInfo="n/a"/>  
+  <warning id="0x83000005" level="error" belong="core" category="ET_Internal" pair="none" description="Upload failure" relatedInfo="n/a"/>  
+  <warning id="0x83000006" level="error" belong="core" category="ET_Internal" pair="none" description="MD5 Computing Failure" relatedInfo="n/a"/>  
+  <warning id="0x83000007" level="error" belong="core" category="ET_Internal" pair="none" description="AVID Repackage Error" relatedInfo="n/a"/>  
+  <warning id="0x83000008" level="error" belong="core" category="ET_Internal" pair="none" description="The merger is unresponsive for a long time and forced to withdraw." relatedInfo="n/a"/>  
+  <warning id="0x83000009" level="error" belong="core" category="ET_CloudSetting" pair="none" description="Transcoding node not installed or status exception" relatedInfo="n/a"/>  
+  <warning id="0x8300000A" level="error" belong="core" category="ET_CloudSetting" pair="none" description="Merge node not installed or status exception" relatedInfo="n/a"/>  
+  <warning id="0x8300000B" level="error" belong="core" category="ET_CloudSetting" pair="none" description="Download node not installed or status exception" relatedInfo="n/a"/>  
+  <warning id="0x8300000C" level="error" belong="core" category="ET_CloudSetting" pair="none" description="Upload node not installed or status exception" relatedInfo="n/a"/>  
+  <warning id="0x8300000D" level="error" belong="core" category="ET_CloudSetting" pair="none" description="Media Information Node Not Installed or State Abnormal" relatedInfo="n/a"/>  
+  <warning id="0x8300000E" level="error" belong="core" category="ET_CloudSetting" pair="none" description="MD5 Computing Node Not Installed or Exceptional State" relatedInfo="n/a"/>  
+  <warning id="0x8300000F" level="error" belong="core" category="ET_CloudSetting" pair="none" description="Output Storage Not Mounted" relatedInfo="n/a"/>  
+  <warning id="0x83000040" level="error" belong="core" category="ET_Internal" pair="none" description="Output file frame rate error" relatedInfo="n/a"/>  
+  <warning id="0x83000041" level="warning" belong="core" category="ET_MediaINfo" pair="none" description="Failure to access media information" relatedInfo="n/a"/> 
+</warning_map>

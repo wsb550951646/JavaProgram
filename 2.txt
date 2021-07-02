@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configs>
+    <classes>
+        <packName>com.DeepDesignPattern.CommandPattern.example.</packName>
+        <className>Print</className>
+        <args>
+            <arg>1</arg>
+        </args>
+    </classes>
+    <classes>
+        <packName>com.DeepDesignPattern.CommandPattern.example.</packName>
+        <className>NoCommand</className>
+        <args>
+            <arg>1</arg>
+        </args>
+    </classes>
+</configs>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:dash:schema:mpd:2011" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-live:2011" type="static" minBufferTime="PT2S" mediaPresentationDuration="PT15.240S">
+	<ProgramInformation>
+		<Title>Arcvideo MPEG DASH</Title>
+	</ProgramInformation>
+	<Period duration="PT15.240S">
+		<AdaptationSet contentType="video" segmentAlignment="true" bitstreamSwitching="true" maxWidth="720" maxHeight="576" maxFrameRate="25/1" par="4:3">
+				<Role schemeIdUri="urn:mpeg:dash:role:2011" value="main" />
+				<SegmentTemplate timescale="25000" presentationTimeOffset="0" media="$RepresentationID$_$Number$.m4v" initialization="$RepresentationID$_init.m4i" duration="250000" startNumber="1" />
+				<Representation id="video_1" mimeType="video/mp4" codecs="avc1.64001e" width="720" height="576" frameRate="25/1" sar="16:15" startWithSAP="1" bandwidth="1000000">
+				</Representation>
+		</AdaptationSet>
+		<AdaptationSet contentType="audio" segmentAlignment="true" bitstreamSwitching="true">
+				<Role schemeIdUri="urn:mpeg:dash:role:2011" value="main" />
+				<SegmentTemplate timescale="32000" presentationTimeOffset="0" media="$RepresentationID$_$Number$.m4a" initialization="$RepresentationID$_init.m4i" duration="320000" startNumber="1" />
+				<Representation id="audio_1" mimeType="audio/mp4" codecs="mp4a.40.2" audioSamplingRate="32000" startWithSAP="1" bandwidth="64000">
+					<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+				</Representation>
+		</AdaptationSet>
+	</Period>
+</MPD>

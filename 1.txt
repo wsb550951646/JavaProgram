@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configs>
+    <config>
+        <name>Jerry</name>
+        <age>22</age>
+        <sex>man</sex>
+        <address>BJ</address>
+        <company>
+            <name>TenXun</name>
+            <address>BJ</address>
+        </company>
+    </config>
+    <config>
+        <name>Tom</name>
+        <age>12</age>
+        <sex>man</sex>
+        <address>HZ</address>
+        <company>
+            <name>DH</name>
+            <address>HZ</address>
+        </company>
+    </config>
+</configs>

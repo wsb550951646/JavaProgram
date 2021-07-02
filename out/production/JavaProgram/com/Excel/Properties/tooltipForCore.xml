@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tooltipRoot>
+    <version>1.0</version>
+    <description>ArcVideo core tooltip</description>
+    <tooltips>
+        <tooltip id="task.stream.scd.alert">
+            <description><![CDATA[开启场景检测功能不建议使用HLS切片输出]]></description>
+        </tooltip>
+        <tooltip id="task.stream.hdr.alert">
+            <description><![CDATA[philips的HDR，需要CentOS7.3以上的环境并安装飞利浦的驱动]]></description>
+        </tooltip>
+        <tooltip id="task.stream.resolution.alert">
+            <description><![CDATA[1.8K分辨率只支持H265 <br>2.输入或者输出是8K分辨率，预处理只能选择CPU]]></description>
+        </tooltip>
+        <tooltip id="task.output.mpegdash.drmSystems">
+            <description><![CDATA[<span class="tip_bold">DRM系统类型有：</span>1:PLAYREADY, 2:WIDEVINE, 4:FAIRPLAY<br><br>使用时，以数值加逗号分隔方式填入，例如：“1,2”]]></description>
+        </tooltip>
+    </tooltips>
+</tooltipRoot>

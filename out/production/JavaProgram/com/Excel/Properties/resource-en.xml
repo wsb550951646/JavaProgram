@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties version="1.0">
+  <!-- alert types -->
+  <entry key="alert.type.hardware">Hardware1</entry>
+  <entry key="alert.type.system">System</entry>
+  <entry key="alert.type.device">Device</entry>
+  <entry key="alert.type.source">Source</entry>
+  <entry key="alert.type.task">Task</entry>
+  <entry key="alert.type.autoscale">Automatic expansion</entry>
+  <!-- alert levels -->
+  <entry key="alert.level.warning">Warning</entry>
+  <entry key="alert.level.error">Error</entry>
+  <entry key="alert.level.notify">Notice</entry>
+  <!-- hardware resources -->
+  <entry key="alert.rule.net_use_rate">Network flow</entry>
+  <entry key="alert.desc.net_use_rate.warning">High flow load: Network Port =#{alert.index}, Current traffic=#{alert.value}%</entry>
+  <entry key="alert.desc.net_use_rate.error">Full flow Load: Network Port=#{alert.index}, Current traffic=#{alert.value}%</entry>
+  <entry key="alert.desc.net_use_rate.notify">Normal flow load: Network=#{alert.index}, Current traffic=#{alert.value}%</entry>
+  <entry key="alert.rule.load_average">System load</entry>
+  <entry key="alert.desc.load_average">High system load: Current load rate=#{alert.value}%</entry>
+  <entry key="alert.rule.cpu_use_rate">CPU Utilization rate</entry>
+  <entry key="alert.desc.cpu_use_rate.warning">Cpu High load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.desc.cpu_use_rate.error">Cpu Full load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.desc.cpu_use_rate.notify">Cpu Normal load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.rule.gpu_use_rate">GPU Utilization rate</entry>
+  <entry key="alert.desc.gpu_use_rate.warning">GPU High load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.desc.gpu_use_rate.error">GPU Full load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.desc.gpu_use_rate.notify">GPU Normal load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.rule.gpu_mem_use_rate">GPU Memory utilization rate</entry>
+  <entry key="alert.desc.gpu_mem_use_rate.warning">GPU High memory load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.desc.gpu_mem_use_rate.error">GPU Full memory load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.desc.gpu_mem_use_rate.notify">GPU Normal memory load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.rule.gpu_encoder_use_rate">GPU Coding usage rate</entry>
+  <entry key="alert.desc.gpu_encoder_use_rate.warning">GPU High coding load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.desc.gpu_encoder_use_rate.error">GPU Full coding load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.desc.gpu_encoder_use_rate.notify">GPU Normal coding load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.rule.gpu_decoder_use_rate">GPU Decoding usage rate</entry>
+  <entry key="alert.desc.gpu_decoder_use_rate.warning">GPU High decoding load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.desc.gpu_decoder_use_rate.error">GPU Full decoding load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.desc.gpu_decoder_use_rate.notify">GPU Normal decoding load: Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.rule.mem_use_rate">Memory utilization rate</entry>
+  <entry key="alert.desc.mem_use_rate.warning">High memory load: Current usage rate =#{alert.value}%</entry>
+  <entry key="alert.desc.mem_use_rate.error">Full memory load: Current usage rate =#{alert.value}%</entry>
+  <entry key="alert.desc.mem_use_rate.notify">Normal memory load: Current usage rate =#{alert.value}%</entry>
+  <entry key="alert.rule.disk_use_rate">Disk utilization rate</entry>
+  <entry key="alert.desc.disk_use_rate.warning">Disk High load: Disk name=#{alert.index}, Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.desc.disk_use_rate.error">Disk Full load: Disk name=#{alert.index}, Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.desc.disk_use_rate.notify">Disk Normal load: Disk name=#{alert.index}, Current usage rate=#{alert.value}%</entry>
+  <entry key="alert.rule.disk_read">Disk read status</entry>
+  <entry key="alert.desc.disk_read.error">Read disk: Catalog=#{alert.index}, Read data exception</entry>
+  <entry key="alert.desc.disk_read.notify">Read disk: Catalog=#{alert.index}, Read data Normal</entry>
+  <entry key="alert.rule.disk_write">Disk write status</entry>
+  <entry key="alert.desc.disk_write.error">Write disk: Catalog=#{alert.index}, Write data exception</entry>
+  <entry key="alert.desc.disk_write.notify">Write disk: Catalog=#{alert.index}, Write data Normal</entry>
+  <entry key="alert.rule.eth_status">Network Card Status</entry>
+  <entry key="alert.desc.eth_status.error">Network Card Status: Adapter Name=#{alert.index}, Network Card Not Activated</entry>
+  <entry key="alert.desc.eth_status.notify">Network Card Status: Adapter Name=#{alert.index}, Normal condition</entry>
+  <entry key="alert.rule.eth_speed">Network Card Working Mode</entry>
+  <entry key="alert.desc.eth_speed.warning">Network Card Working Mode: Adapter Name=#{alert.index}, Current working mode=#{alert.value}Mb/s,Actual support#{alert.value}0Mb/s</entry>
+  <entry key="alert.desc.eth_speed.notify">Network Card Working Mode Normal: Adapter Name=#{alert.index}, Current working mode=#{alert.value}Mb/s,Actual support#{alert.value}0Mb/s</entry>
+  <entry key="alert.rule.storage_status">Mount status</entry>
+  <entry key="alert.desc.storage_status.warning">Mount status: Catalog=#{alert.index}, unmounted</entry>
+  <entry key="alert.desc.storage_status.notify">Mount status: Catalog=#{alert.index}, Normal mounting</entry>
+  <entry key="alert.rule.cpu_temp">CPU temperature</entry>
+  <entry key="alert.desc.cpu_temp.warning">CPU High temperature: CPU Name=#{alert.index}, temperature=#{alert.value}℃</entry>
+  <entry key="alert.desc.cpu_temp.error">CPU Excessive temperature: CPU Name=#{alert.index}, temperature=#{alert.value}℃</entry>
+  <entry key="alert.desc.cpu_temp.notify">CPU Normal temperature: CPU Name=#{alert.index}, temperature=#{alert.value}℃</entry>
+  <entry key="alert.rule.gpu_temp">GPU temperature</entry>
+  <entry key="alert.desc.gpu_temp.warning">GPU High temperature, GPU Name=#{alert.index}, temperature=#{alert.value}℃</entry>
+  <entry key="alert.desc.gpu_temp.error">GPU Excessive temperature, GPU Name=#{alert.index}, temperature=#{alert.value}℃</entry>
+  <entry key="alert.desc.gpu_temp.notify">GPU Normal temperature, GPU Name=#{alert.index}, temperature=#{alert.value}℃</entry>
+  <entry key="alert.rule.fan_speed">Fan speed</entry>
+  <entry key="alert.desc.fan_speed.warning">slow fan speed: Fan id=#{alert.index}, speed=#{alert.value}turn/min</entry>
+  <entry key="alert.desc.fan_speed.error">Fan stop: Fan id=#{alert.index}, speed=#{alert.value}turn/min</entry>
+  <entry key="alert.desc.fan_speed.notify">Normal fan speed: Fan id=#{alert.index}, speed=#{alert.value}turn/min</entry>
+  <entry key="alert.rule.waiting_task">Waiting queue</entry>
+  <entry key="alert.desc.waiting_task.warning">Waiting queue is too long: Current number of waiting tasks:#{alert.value}</entry>
+  <entry key="alert.desc.waiting_task.notify">Waiting queue return to normal: Current number of waiting tasks:#{alert.value}</entry>
+  <entry key="alert.rule.waiting_mediainfo">Media information waiting queue:</entry>
+  <entry key="alert.desc.waiting_mediainfo.warning">Media information waiting queue is too long: Current waiting number:#{alert.value}</entry>
+  <entry key="alert.desc.waiting_mediainfo.notify">Media information waiting queue return to normal: Current waiting number:#{alert.value}</entry>
+  <!-- device resources -->
+  <entry key="alert.rule.device_offline">Device disconnection</entry>
+  <entry key="alert.desc.device_offline">Server disconnection</entry>
+  <entry key="alert.rule.device_no_backup">No spare Device</entry>
+  <entry key="alert.desc.device_no_backup">m+n group[#{group_name}]: No standby servers available</entry>
+  <entry key="alert.rule.device_take_over">M+N switch</entry>
+  <entry key="alert.desc.device_take_over">m+n group[#{group_name}]: Server[#{source_ip}]switch to[#{new_server}]</entry>
+  <entry key="alert.rule.device_switch_role">1+1 switch</entry>
+  <entry key="alert.desc.device_switch_role">1+1 group[#{group_name}]: The server[#{source_ip}]switch to[#{new_server}]</entry>
+  <entry key="alert.rule.device_network_broken">Network disconnection</entry>
+  <entry key="alert.desc.device_network_broken">Input or output network exception</entry>
+  <entry key="alert.rule.device_gpu_broken">GPU exception</entry>
+  <entry key="alert.desc.device_gpu_broken">At least one GPU is not working properly</entry>
+  <entry key="alert.rule.fault_monitor_failed">Failure of Start-up Fault Detection</entry>
+  <entry key="alert.desc.fault_monitor_failed">Failure Detection Service Not Opened</entry>
+  <entry key="alert.rule.fault_detected">Device failure</entry>
+  <entry key="alert.desc.fault_detected">Server failure, unable to connect</entry>
+  <entry key="alert.rule.fault_reboot_failed">Failure to restart Device</entry>
+  <entry key="alert.desc.fault_reboot_failed">reboot device[#{source_ip}] fail:[#{error_code}]</entry>
+  <entry key="alert.rule.fault_switch_failed">Failed to set switch port</entry>
+  <entry key="alert.desc.fault_switch_failed">Setting up the switch port[#{source_ip}] fail:[#{error_code}]</entry>
+  <entry key="alert.rule.ha_warning">Main and Standby Switching</entry>
+  <entry key="alert.desc.ha_warning">Main and Standby Switching,The server=#{alert.ip},state=#{alert.value}</entry>
+  <!-- task resources -->
+  <entry key="alert.rule.task_error">Mission execution failure</entry>
+  <entry key="alert.desc.task_error">Mission execution failure: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.task_warning">Task Execution Warning</entry>
+  <entry key="alert.desc.task_warning">Task Execution Warning: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_setting_error">Transcoding settings</entry>
+  <entry key="alert.desc.et_setting_error">Transcoding Settings Error: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_setting_warning">Transcoding settings</entry>
+  <entry key="alert.desc.et_setting_warning">Transcoding settings: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_internal_error">transcoding</entry>
+  <entry key="alert.desc.et_internal_error">Transcoding failure: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_internal_warning">transcoding</entry>
+  <entry key="alert.desc.et_internal_warning">Transcoding Alarm: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_performance_error">Transcoding performance</entry>
+  <entry key="alert.desc.et_performance_error">Transcoding Performance Error: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_performance_warning">Transcoding performance</entry>
+  <entry key="alert.desc.et_performance_warning">Transcoding Performance Warning: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_input_error">Input</entry>
+  <entry key="alert.desc.et_input_error">Input file exception: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_input_warning">Input</entry>
+  <entry key="alert.desc.et_input_warning">Input file exception: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.health_threshold_warning">Node health threshold</entry>
+  <entry key="alert.desc.health_threshold_warning">Node#{task_input}Reaching the health threshold of the node, no more new tasks will be sent.</entry>
+  <entry key="alert.rule.et_parse_warning">Analysis</entry>
+  <entry key="alert.desc.et_parse_warning">File parsing exception: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_parse_error">Analysis</entry>
+  <entry key="alert.desc.et_parse_error">File parsing exception: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_output_error">output</entry>
+  <entry key="alert.desc.et_output_error">File output failed: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_output_warning">output</entry>
+  <entry key="alert.desc.et_output_warning">File output failed: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_storage_warning">Storage</entry>
+  <entry key="alert.desc.et_storage_warning">Storage exception: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_storage_error">Storage</entry>
+  <entry key="alert.desc.et_storage_error">Storage exception: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_videoencode_error">video coding</entry>
+  <entry key="alert.desc.et_videoencode_error">Video coding failure: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_videoencode_warning">video coding</entry>
+  <entry key="alert.desc.et_videoencode_warning">Video coding failure: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_videodecode_error">Video decoding</entry>
+  <entry key="alert.desc.et_videodecode_error">Video decoding failure: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_videodecode_warning">Video decoding</entry>
+  <entry key="alert.desc.et_videodecode_warning">Video decoding failure: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_audioencode_error">Audio Coding</entry>
+  <entry key="alert.desc.et_audioencode_error">Audio Coding Failure: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_audioencode_warning">Audio Coding</entry>
+  <entry key="alert.desc.et_audioencode_warning">Audio Coding Failure: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_audiodecode_error">Audio decoding</entry>
+  <entry key="alert.desc.et_audiodecode_error">Audio Coding Failure: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_audiodecode_warning">Audio decoding</entry>
+  <entry key="alert.desc.et_audiodecode_warning">Audio decoding Failure: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_source_error">Source of information</entry>
+  <entry key="alert.desc.et_source_error">Source exception: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_source_warning">Source of information</entry>
+  <entry key="alert.desc.et_source_warning">Source exception: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_httpupload_error">HTTP upload</entry>
+  <entry key="alert.desc.et_httpupload_error">HTTP Upload failure: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_httpupload_warning">HTTP upload</entry>
+  <entry key="alert.desc.et_httpupload_warning">HTTP Upload alarm: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_license_warning">Grant authorization</entry>
+  <entry key="alert.desc.et_license_warning">Authorization restrictions: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_license_error">Grant authorization</entry>
+  <entry key="alert.desc.et_license_error">Authorization restrictions: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_ftp_error">FTP</entry>
+  <entry key="alert.desc.et_ftp_error">FTP exception: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_ftp_warning">FTP</entry>
+  <entry key="alert.desc.et_ftp_warning">FTP exception: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_cloudsetting_error">Transcoding settings</entry>
+  <entry key="alert.desc.et_cloudsetting_error">Transcoding settings Error: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <entry key="alert.rule.et_cloudsetting_warning">Transcoding settings</entry>
+  <entry key="alert.desc.et_cloudsetting_warning">Transcoding settings Error: Task=#{task_id}, Name=#{task_name}, Error=#{error_code}, #{description}</entry>
+  <!-- autoscale resources -->
+  <entry key="alert.rule.scale_up_failed">Automatic Capacity Expansion Error</entry>
+  <entry key="alert.desc.scale_up_failed">Automatic Capacity Expansion Error: group=#{groupId}, #{description}</entry>
+  <entry key="alert.rule.storage_server_health">Storage server exception</entry>
+  <entry key="alert.desc.storage_server_health">Storage server exception: status=#{server_status}</entry>
+  <entry key="alert.rule.coordinator">System Scheduling Abnormality</entry>
+  <entry key="alert.desc.coordinator">System Scheduling Abnormality: Group Name=#{group_name},There are idle transcoding resources, but there are tasks waiting</entry>
+  <entry key="alert.rule.task_running_time">Task exception</entry>
+  <entry key="alert.desc.task_running_time">Task exception: Task=#{taskId},#{time}The transcoding process may have been hang if the progress is not updated in minutes.</entry>
+  <entry key="alert.rule.system_concurrent">Concurrent Number</entry>
+  <entry key="alert.desc.system_concurrent">License The number of channels is less than the number of channels that the current system has configured. System capabilities are not fully utilized. Number of System Channels=#{total_concurrent}, License Number of System Channels=#{license_concurrent}</entry>
+  <entry key="alert.rule.et_mediainfo_warning">Abnormal Media Information</entry>
+  <entry key="alert.desc.et_mediainfo_warning">Inaccessible Media Information, File Path=#{file_path}</entry>
+</properties>

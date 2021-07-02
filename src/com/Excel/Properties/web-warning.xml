@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<warning_map version="1.0" description="all warning infomation of arcvideo cloud transcoder"> 
+  <!-- transcoder -->  
+  <warning id="0x81000001" level="error" belong="live/core" category="ET_Internal" pair="none" description="任务启动时间过长1" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x81000002" level="error" belong="live/core" category="ET_Internal" pair="none" description="应用过期" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x81000003" level="error" belong="live/core" category="ET_Internal" pair="none" description="转码任务异常退出" relatedInfo="n/a"/>  
+  <!-- license -->  
+  <warning id="0x81000101" level="error" belong="live/core" category="ET_License" pair="none" description="转码个数超出license" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x81000102" level="error" belong="live/core" category="ET_License" pair="none" description="任务输出个数超出license" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x81000103" level="error" belong="live/core" category="ET_License" pair="none" description="HD任务个数超出license" needHandle="true" relatedInfo="n/a"/>  
+  <warning id="0x81000104" level="error" belong="core" category="ET_License" pair="none" description="SD任务个数超出license" relatedInfo="n/a"/>  
+  <warning id="0x81000105" level="error" belong="core" category="ET_License" pair="none" description="DTS授权已到期，如需继续使用请联系当虹科技0571-87767690" relatedInfo="n/a"/>  
+  <!--  FTP -->  
+  <warning id="0x81000301" level="error" belong="live/core" category="ET_Ftp" pair="none" description="FTP上传失败" relatedInfo="n/a"/>  
+  <warning id="0x81000302" level="error" belong="live/core" category="ET_Ftp" pair="none" description="FTP连接失败" relatedInfo="n/a"/>  
+  <warning id="0x81000303" level="error" belong="live/core" category="ET_Ftp" pair="none" description="FTP登陆失败" relatedInfo="n/a"/>  
+  <warning id="0x81000304" level="error" belong="live/core" category="ET_Ftp" pair="none" description="FTP地址错误" relatedInfo="n/a"/>  
+  <!-- Other -->  
+  <warning id="0x81000601" level="error" belong="live/core" category="ET_Internal" pair="none" description="打开文件失败" relatedInfo="n/a"/>  
+  <warning id="0x81000602" level="error" belong="live/core" category="ET_Internal" pair="none" description="读取文件失败" relatedInfo="n/a"/>  
+  <warning id="0x81000603" level="error" belong="live/core" category="ET_Internal" pair="none" description="写入文件失败" relatedInfo="n/a"/>  
+  <warning id="0x8100060B" level="error" belong="live/core" category="ET_Internal" pair="none" description="无法启动transcoder.exe" relatedInfo="n/a"/>  
+  <!-- cloud -->  
+  <warning id="0x83000001" level="error" belong="core" category="ET_CloudSetting" pair="none" description="找不到转码设备" relatedInfo="n/a"/>  
+  <warning id="0x83000002" level="error" belong="core" category="ET_CloudSetting" pair="none" description="任务下发失败" relatedInfo="n/a"/>  
+  <warning id="0x83000003" level="error" belong="core" category="ET_CloudSetting" pair="none" description="未定义转码临时文件路径" relatedInfo="n/a"/>  
+  <warning id="0x83000004" level="error" belong="core" category="ET_Internal" pair="none" description="下载失败" relatedInfo="n/a"/>  
+  <warning id="0x83000005" level="error" belong="core" category="ET_Internal" pair="none" description="上传失败" relatedInfo="n/a"/>  
+  <warning id="0x83000006" level="error" belong="core" category="ET_Internal" pair="none" description="MD5计算失败" relatedInfo="n/a"/>  
+  <warning id="0x83000007" level="error" belong="core" category="ET_Internal" pair="none" description="AVID转封装错误" relatedInfo="n/a"/>  
+  <warning id="0x83000008" level="error" belong="core" category="ET_Internal" pair="none" description="合并长时间无响应，强制退出。" relatedInfo="n/a"/>  
+  <warning id="0x83000009" level="error" belong="core" category="ET_CloudSetting" pair="none" description="转码节点未安装或者状态异常" relatedInfo="n/a"/>  
+  <warning id="0x8300000A" level="error" belong="core" category="ET_CloudSetting" pair="none" description="合并节点未安装或者状态异常" relatedInfo="n/a"/>  
+  <warning id="0x8300000B" level="error" belong="core" category="ET_CloudSetting" pair="none" description="下载节点未安装或者状态异常" relatedInfo="n/a"/>  
+  <warning id="0x8300000C" level="error" belong="core" category="ET_CloudSetting" pair="none" description="上传节点未安装或者状态异常" relatedInfo="n/a"/>  
+  <warning id="0x8300000D" level="error" belong="core" category="ET_CloudSetting" pair="none" description="媒体信息节点未安装或者状态异常" relatedInfo="n/a"/>  
+  <warning id="0x8300000E" level="error" belong="core" category="ET_CloudSetting" pair="none" description="MD5计算节点未安装或者状态异常" relatedInfo="n/a"/>  
+  <warning id="0x8300000F" level="error" belong="core" category="ET_CloudSetting" pair="none" description="输出存储未挂载" relatedInfo="n/a"/>  
+  <warning id="0x83000040" level="error" belong="core" category="ET_Internal" pair="none" description="输出文件帧率错误" relatedInfo="n/a"/>  
+  <warning id="0x83000041" level="warning" belong="core" category="ET_MediaINfo" pair="none" description="取不到媒体信息" relatedInfo="n/a"/> 
+</warning_map>
